@@ -23,20 +23,17 @@ body {
   justify-content: space-between;
   z-index: 1;
   border-bottom: 2px solid black;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  &_title {
+    line-height: 50px;
+    font-size: 30px;
+    padding-left: 20px;
+    font-weight: bold;
+  }
   @media screen and (min-width:300px) {
-    a.navbar-brand {
-      font-size: 40px;
-      color: black;
-      text-decoration: none;
-    }
-
-    .nav {
-      margin-top: 10px;
-      a.nav-item {
-        font-size: 20px;
-        color: black;
-        text-decoration: none;
-      }
-    }
+    
   }
 }  
