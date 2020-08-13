@@ -1,6 +1,17 @@
 .header
   .header_title
-    = link_to "PCPART", root_path, class: "navbar-brand ml-4"
+    = link_to "PCPART", root_path
   .menu
+    .nav-content
+      %span
+      %span
+      %span
     %ul.nav
-      = link_to "投稿画面メニューへ", root_path, class: "nav-item"
+      %li.home
+        = link_to root_path, class: "link-btn" do
+          %i.fas.fa-home
+          %span ホーム
+        -# %li
+        -#   = link_to root_path, class: "link-btn" do
+        -#     %i.far.fa-paper-plane
+        -#     %span 投稿
