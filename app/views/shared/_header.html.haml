@@ -4,20 +4,20 @@
   .menu
     %ul.nav.d-flex.justify-content-end.border.mb-3.mt-2
       %li.home
-        = link_to root_path, class: "link-btn p-2 bg-primary text-white mr-4" do
+        = link_to root_path, class: "link-btn p-2 bg-primary text-white mr-2" do
           %i.fas.fa-home
           %span ホーム
       - if user_signed_in?    
         %li
-          = link_to root_path, class: "link-btn p-2 bg-primary text-white mr-4 mt-4" do
+          = link_to root_path, class: "link-btn p-2 bg-primary text-white mr-2 mt-4" do
             %i.far.fa-paper-plane
             %span 投稿
         %li.nav-logout
-          = link_to destroy_user_session_path, method: :delete, class: "link-btn p-2 bg-primary text-white mr-4 mt-4" do
+          = link_to destroy_user_session_path, method: :delete, class: "link-btn p-2 bg-primary text-white mr-2 mt-4" do
             %i.fa.fa-user-minus
             %span ログアウト    
       - else
         %li.nav-login
-          = link_to "ログイン", new_user_session_path, class: "link-btn p-2 bg-primary text-white mr-4 mt-4"
+          = link_to "ログイン", new_user_session_path, class: "link-btn p-2 bg-primary text-white mr-2 mt-4"
         %li.nav-sign
-          = link_to "会員登録", new_user_registration_path, class: "link-btn p-2 bg-primary text-white mr-4 mt-4"      
+          = link_to "会員登録", new_user_registration_path, class: "link-btn p-2 bg-primary text-white mr-2 mt-4"      
