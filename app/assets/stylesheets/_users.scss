@@ -1,3 +1,43 @@
-.field{
-  
+.container{
+  padding-top: 100px;
+  .border.p-4{
+    a{
+      text-decoration: none;
+    }
+    h2{
+      text-align: center;
+      padding: 10px 0;
+    }
+    .new_user{
+      text-align: center;
+    }
+    .text-field.width{
+      width: 300px;
+      border-radius: 5px;
+    }
+    .actions{
+      margin: 0 auto;
+      width: 376px;
+      display: flex;
+      justify-content: space-around;
+      .btn{
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 20px 0;
+        padding: 0.3rem 0.7rem;
+        border: solid 2px #ffbf7f;
+        background-color: #fff;
+        color: black;
+        height: 35px;
+      }
+      .session{
+        width: 96px;
+        margin: 27px 0;
+        a{
+          display: flex;
+          color: black;
+        }
+      }
+    }
+  }
 }
