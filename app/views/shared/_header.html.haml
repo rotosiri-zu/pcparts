@@ -9,7 +9,7 @@
           %span ホーム
       - if user_signed_in?    
         %li
-          = link_to root_path, class: "link-btn p-2 bg-primary text-white mr-2 mt-4" do
+          = link_to new_post_path, class: "link-btn p-2 bg-primary text-white mr-2 mt-4" do
             %i.far.fa-paper-plane
             %span 投稿
         %li.nav-logout
