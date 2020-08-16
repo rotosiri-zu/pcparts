@@ -5,6 +5,7 @@
       text-decoration: none;
     }
     h2{
+      font-size: 18px;
       text-align: center;
       padding: 10px 0;
     }
@@ -37,6 +38,18 @@
           display: flex;
           color: black;
         }
+      }
+    }
+    .text-btn{
+      .btn{
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 20px 0;
+        padding: 0.3rem 0.7rem;
+        border: solid 2px #ffbf7f;
+        background-color: #fff;
+        color: black;
+        height: 35px;
       }
     }
   }
