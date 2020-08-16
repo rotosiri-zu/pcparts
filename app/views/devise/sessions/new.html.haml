@@ -1,6 +1,6 @@
 .container
   .border.p-4
-    %h2 Log in
+    %h2 ログイン
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .form-group
         = f.label :email
@@ -18,3 +18,5 @@
         = f.submit "ログイン", class: "btn"
         .session
           = render "devise/shared/links"
+      .text-btn
+        = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn"
