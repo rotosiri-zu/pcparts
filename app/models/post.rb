@@ -1,4 +1,9 @@
 class Post < ApplicationRecord
-  has_many :images, dependent: :destroy
-  accepts_nested_attributes_for :images, allow_destroy: true
+  mount_uploader :image, ImageUploader
+  belongs_to :user
+  validates  :title, presence: true
+  validates  :genre, presence: true
+  validates  :price, presence: true
+  validates  :text, presence: true
+  validates  :image, presence: true
 end
