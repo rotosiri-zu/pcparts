@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  
+  before_action :move_to_index, except: [:index, :show]
   def index
     @posts = Post.all
     @posts = Post.order("created_at").limit(26)
@@ -10,14 +10,22 @@ class PostsController < ApplicationController
   end
 
   def create
-    binding.pry
     @posts = Post.create(post_params)
     if @posts.save
       flash[:success] = 'アイテムを登録しました'
       redirect_to root_path
     else
       render :new
-    end  
+    end
+
+    def show
+      @posts = Post.find(parems[:id])
+    end
+
+    def move_to_index
+      redirecto_to action: :index unless
+      user_signed_in?
+    end
   end
 
   private
