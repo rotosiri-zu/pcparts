@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     end
 
     def show
-      @posts = Post.find(parems[:id])
+      @posts = Post.find(params[:id])
     end
 
     def move_to_index
