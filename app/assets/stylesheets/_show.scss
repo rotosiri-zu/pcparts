@@ -1,11 +1,14 @@
 .row.p-3{
   width: 1170px;
-  height: 465px;
+  height: 600px;
   h2 {
     text-align: center;
     margin: 30px 0;
     font-size: 30px;
     width: 1170px;
     height: 33px;
+  }
+  .panel.panel-default{
+    border-color: #ddd;
   }
 }
