@@ -1,10 +1,19 @@
 .container
   .row.p-3
     %h2 投稿詳細情報
-    .col-mb-4
+    .col-md-4
       .post_detail
         .panel.panel-default
           .panel-heading.text-center
             = image_tag @posts.image.url, class: "card-img-top"
     .col-md-8
-    
+      %h4= @posts.title
+      %table.table
+        %tbody
+          %tr
+            %th 価格
+            %td= @posts.price
+          %tr 
+            %th ジャンル
+            %td= @posts.genre
+        
