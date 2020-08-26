@@ -14,10 +14,12 @@
 }
 .col-md-8{
   float: left;
-  width: 750px;
-  height: 199px;
+  border: 1px solid black;
   h4{
     margin: 15px 0;
     font-size: 18px;
+  }
+  .buttons.text-coenter{
+    text-align: center;
   }
 }
