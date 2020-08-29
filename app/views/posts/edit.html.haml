@@ -20,4 +20,5 @@
         = f.label :text, '本文'
         = f.text_area :text, class: 'form-control', rows: "4"
       .button
-        = f.submit '投稿', class: 'btn btn-primary'
+        = link_to 'キャンセル', posts_path, class: 'btn btn-secondary'
+        = f.submit '更新する', class: 'btn btn-primary'        
