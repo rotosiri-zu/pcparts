@@ -46,6 +46,11 @@ class PostsController < ApplicationController
       redirect_to root_path
     end  
   end  
+
+  def search
+    
+  end
+
   private
   
   def post_params
@@ -66,5 +71,4 @@ class PostsController < ApplicationController
     redirecto_to action: :index unless
     user_signed_in?
   end
-
 end  

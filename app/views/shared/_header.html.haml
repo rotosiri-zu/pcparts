@@ -3,11 +3,15 @@
     = link_to "PCPART", root_path
   .menu
     %ul.nav.d-flex.justify-content-end.border.mb-3.mt-2
+      .search-bar
+        -# = search_form_for @search, class: 'container-2' do |f|
+        -#   = f.text_field :title_cont, placeholder: '商品名検索'
+        
       %li.home
         = link_to root_path, class: "link-btn p-2 bg-primary text-white" do
           %i.fas.fa-home
           %span ホーム
-      - if user_signed_in?    
+      - if user_signed_in?
         %li
           = link_to new_post_path, class: "link-btn p-2 bg-primary text-white mt-4" do
             %i.far.fa-paper-plane
