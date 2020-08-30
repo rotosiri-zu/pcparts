@@ -46,6 +46,11 @@ class PostsController < ApplicationController
       redirect_to root_path
     end  
   end  
+
+  def search
+    
+  end
+
   private
   
   def post_params
