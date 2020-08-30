@@ -66,5 +66,4 @@ class PostsController < ApplicationController
     redirecto_to action: :index unless
     user_signed_in?
   end
-
 end  
