@@ -2,11 +2,12 @@
   .header_title
     = link_to "PCPART", root_path
   .menu
-    %ul.nav.d-flex.justify-content-end.border.mb-3.mt-2
+    %ul.nav.d-flex.justify-content-end.mb-3.mt-2
       .search-bar
-        -# = search_form_for @search, class: 'container-2' do |f|
-        -#   = f.text_field :title_cont, placeholder: '商品名検索'
-        
+        = search_form_for @q, url: search_posts_path, class: 'container-2' do |f|
+          = f.text_field :title_cont, id: 'search', placeholder: '商品名検索'
+          = button_tag type: 'submit', class: "search-btn" do
+            = icon('fas', 'search')
       %li.home
         = link_to root_path, class: "link-btn p-2 bg-primary text-white" do
           %i.fas.fa-home
