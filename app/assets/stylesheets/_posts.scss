@@ -23,6 +23,7 @@ body {
   z-index: 1;
   border-bottom: 2px solid black;
   a {
+    margin-right: 10px;
     color: black;
     text-decoration: none;
   }
@@ -32,7 +33,27 @@ body {
     padding-left: 20px;
     font-weight: bold;
   }
-  @media screen and (min-width:300px) {
-    
+}
+// 検索ボタン
+.search-bar{
+  .container-2{
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    margin:0 auto;
   }
-}  
+  .container-2 input#search{
+    text-align: center;
+    border-radius: 35px;
+    outline: none;
+  }
+  .search-btn{
+    position: absolute;
+    left: 0;
+    border: none;
+    background: none;
+    font-size: 20px;
+    outline: 0;
+    cursor: pointer;
+  }
+}

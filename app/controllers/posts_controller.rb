@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   before_action :set_posts, only: %i[show edit update destroy]
-
+  
   def index
     @posts = Post.all
     @posts = Post.order("created_at").limit(26)
@@ -46,10 +46,6 @@ class PostsController < ApplicationController
       redirect_to root_path
     end  
   end  
-
-  def search
-    
-  end
 
   private
   
