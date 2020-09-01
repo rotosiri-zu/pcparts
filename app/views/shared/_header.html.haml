@@ -1,7 +1,7 @@
 .header
   .header_title
     = link_to "PCPART", root_path
-  .menu
+  .navbar.navber-default.navbar-static-top
     %ul.nav.d-flex.justify-content-end.mb-3.mt-2
       .search-bar
         = search_form_for @q, url: search_posts_path, class: 'container-2' do |f|
