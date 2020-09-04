@@ -1,28 +1,31 @@
 .header
   .header_title
     = link_to "PCPART", root_path
-  .navbar.navber-default.navbar-static-top
-    %ul.nav.d-flex.justify-content-end.mb-3.mt-2
-      .search-bar
-        = search_form_for @q, url: search_posts_path, class: 'container-2' do |f|
-          = f.text_field :title_cont, id: 'search', placeholder: '商品名検索'
-          = button_tag type: 'submit', class: "search-btn" do
-            = icon('fas', 'search')
-      %li.home
-        = link_to root_path, class: "link-btn p-2 bg-primary text-white" do
-          %i.fas.fa-home
-          %span ホーム
-      - if user_signed_in?
-        %li
-          = link_to new_post_path, class: "link-btn p-2 bg-primary text-white mt-4" do
-            %i.far.fa-paper-plane
-            %span 投稿
-        %li.nav-logout
-          = link_to destroy_user_session_path, method: :delete, class: "link-btn p-2 bg-primary text-white mt-4" do
-            %i.fa.fa-user-minus
-            %span ログアウト    
-      - else
-        %li.nav-login
-          = link_to "ログイン", new_user_session_path, class: "link-btn p-2 bg-primary text-white mt-4"
-        %li.nav-sign
-          = link_to "会員登録", new_user_registration_path, class: "link-btn p-2 bg-primary text-white mt-4"      
+  %nav.navbar.navbar-expand-lg.navbar-light
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.nav
+        .search-bar
+          = search_form_for @q, url: search_posts_path, class: 'container-2' do |f|
+            = f.text_field :title_cont, id: 'search', placeholder: '商品名検索'
+            = button_tag type: 'submit', class: "search-btn" do
+              = icon('fas', 'search')
+        %li.home
+          = link_to root_path, class: "link-btn p-2 bg-primary text-white" do
+            %i.fas.fa-home
+            %span ホーム
+        - if user_signed_in?
+          %li
+            = link_to new_post_path, class: "link-btn p-2 bg-primary text-white mt-4" do
+              %i.far.fa-paper-plane
+              %span 投稿
+          %li.nav-logout
+            = link_to destroy_user_session_path, method: :delete, class: "link-btn p-2 bg-primary text-white mt-4" do
+              %i.fa.fa-user-minus
+              %span ログアウト    
+        - else
+          %li.nav-login
+            = link_to "ログイン", new_user_session_path, class: "link-btn p-2 bg-primary text-white mt-4"
+          %li.nav-sign
+            = link_to "会員登録", new_user_registration_path, class: "link-btn p-2 bg-primary text-white mt-4"      

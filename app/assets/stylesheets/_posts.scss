@@ -32,6 +32,12 @@ body {
     padding-left: 20px;
     font-weight: bold;
   }
+  .navbar{
+    padding: 0;
+    .navbar-toggler{
+      padding-top: 0;
+    }
+  }
 }
 // 検索ボタン
 .search-bar{
@@ -42,6 +48,7 @@ body {
     margin:0 auto;
   }
   .container-2 input#search{
+    margin-right: 10px;
     text-align: center;
     border-radius: 35px;
     outline: none;
