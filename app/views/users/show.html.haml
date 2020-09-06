@@ -1,0 +1,13 @@
+.container
+  %h1 投稿一覧
+  .row
+    - @user.posts.each do |post|
+      .col-lg-3.col-md-6
+        .card
+          = image_tag post.image.url, class: "card-img-top"
+          .card-body
+            %h5.card-title= (post.title)
+            %p.card-genre= (post.genre)
+            %span.card-price= (post.price)
+          .border.border-white.mt-4
+            = link_to "詳細へ", post_path(post), class: "btn btn-primary" 
