@@ -8,6 +8,6 @@
           .card-body
             %h5.card-title= (post.title)
             %p.card-genre= (post.genre)
-            %span.card-price= (post.price)
+            %span.card-price= "¥#{post.price.to_s(:delimited)}"
           .border.border-white.mt-4
             = link_to "詳細へ", post_path(post), class: "btn btn-primary" 

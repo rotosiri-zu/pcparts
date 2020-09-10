@@ -12,7 +12,8 @@
         %tbody
           %tr
             %th 価格
-            %td= @posts.price
+            %td
+              ¥#{number_with_delimiter(@posts.price)}
           %tr
             %th ジャンル
             %td= @posts.genre
