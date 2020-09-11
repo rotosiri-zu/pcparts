@@ -1,0 +1,8 @@
+/ 口コミ入力フォーム
+= form_for @comment, url: posts_path do |f|
+  / エラーメッセージ
+  = render 'layouts/error_messages', model: f.object
+  / 評価
+  #star.form-group.row
+    = f.label :rate,'評価 ', class:'col-md-3 col-form-label'
+    = f.hidden_field :rate, id: :review_star
