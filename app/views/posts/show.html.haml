@@ -29,3 +29,4 @@
     = link_to '削除', post_path, class: 'btn btn-danger', method: :delete
   .p-3
     %h2.mb-3 口コミ投稿する
+    = render 'comments/new_post', post: @post, comment: @comment
