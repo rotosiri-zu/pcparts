@@ -25,3 +25,7 @@
     = f.label :content, '口コミ内容', class: 'col-md-3 col-form-label'
     .col-md-9
       = f.text_area :content, class: "form-control", rows: "8"
+  / 確認ボタン
+  .form-group.row.justify-content-end
+    .col-md-9
+      = f.submit '投稿する', class: "btn btn-primary"
