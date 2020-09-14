@@ -23,8 +23,13 @@
           %li.nav-item.dropdown
             %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               マイページ
-            %ul.dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+            %div.dropdown-menu{"aria-labelledby" => "navbarDropdown"}
               %span= link_to "投稿一覧", user_path(current_user), class: "dropdown-item"
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              カテゴリーから選ぶ
+            %div.dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              
           %li.nav-logout
             = link_to destroy_user_session_path, method: :delete, class: "link-btn p-2 bg-primary text-white mt-4" do
               %i.fa.fa-user-minus
