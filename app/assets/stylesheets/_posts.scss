@@ -6,7 +6,6 @@ body {
   margin: 0;
   background-repeat: repeat;
   background-size: cover;
-  background-color: skyblue;
   font-family: 'Noto Sans Japanese',
   'Source Sans Pro', Helvetica , Arial,
   '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
@@ -31,6 +30,9 @@ body {
     font-size: 30px;
     padding-left: 20px;
     font-weight: bold;
+  }
+  nav.navbar.navbar-expand-lg.navbar-light{
+    margin-left: auto;
   }
   .navbar{
     padding: 0;
