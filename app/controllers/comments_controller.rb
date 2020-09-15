@@ -1,20 +1,19 @@
 class CommentsController <  ApplicationController
   
   def create
-    @comment = Comment.find(params[:post][:post_id])
-    @post = current_user.posts.build(post_params)
-    if @post.save
+    @comments = Comment.create(comment_params)
+    if @comments.save
       flash[:success] = '口コミを投稿しました'
-      redirect_to @posts
+      redirect_to root_path
     else
       flash.now[:danger] = '口コミの投稿に失敗しました'
-      render 'posts/show'
+      redirect_back(fallback_location: root_path)
     end
   end
 
   private
 
   def comment_params
-    params.require(:comment).permit(:rate, :content, :post_id)
+    params.require(:comment).permit(:title, :rate, :content).merge(user_id: current_user.id, post_id: params[:post_id])
   end
 end
