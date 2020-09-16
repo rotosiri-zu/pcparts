@@ -1,4 +1,7 @@
 - if @comments.present?
   - @comments.each do |comment|
     .row.posts
-      %p= comment.title
+      .col-md-6.mb-3
+        .posts-content
+          %p= comment.created_at.strftime("%Y-%m-%d %H:%M") 
+          %p= comment.title
