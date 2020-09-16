@@ -3,5 +3,22 @@
     .row.posts
       .col-md-6.mb-3
         .posts-content
-          %p= comment.created_at.strftime("%Y-%m-%d %H:%M") 
-          %p= comment.title
+          %p= comment.created_at.strftime("%Y-%m-%d %H:%M")
+          %h4.mb-3
+            評価：#{comment.rate}点 | #{comment.title}
+          / 星評価
+          %div{:id => "star-rate-#{comment.id}"}
+            :javascript
+              $('#star-rate-#{comment.id}').raty({
+                size: 36,
+                starOff:  '#{asset_path('star-off.png')}',
+                starOn : '#{asset_path('star-on.png')}',
+                starHalf: '#{asset_path('star-half.png')}',
+                half: true,
+                readOnly: true,
+                score: '#{comment.rate}',
+              });
+          / /星評価
+          %p= comment.content
+        .col-md-12.edit-button
+          
