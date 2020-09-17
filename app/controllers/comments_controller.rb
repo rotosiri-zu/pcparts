@@ -12,7 +12,8 @@ class CommentsController <  ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+  end
 
   def update
   end
@@ -25,10 +26,9 @@ class CommentsController <  ApplicationController
 
   def correct_user
     @comment = current_user.comments.find_by(id: params[:id])
-    redirect_to posts_path if @posts.nil?
   end
 
   def set_comments
-    @comment = Comment.find(params[:id])
+    @comment = Post.find(params[:id])
   end
 end
