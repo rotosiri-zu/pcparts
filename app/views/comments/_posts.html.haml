@@ -3,7 +3,7 @@
     .row.posts
       .col-md-6.mb-3
         .posts-content
-          %p= comment.created_at.strftime("%Y-%m-%d %H:%M")
+          %p 投稿日： #{comment.created_at.strftime("%Y/%m/%d %H:%M")} #{comment.user.nickname}
           %h4.mb-3
             評価：#{comment.rate}点 | #{comment.title}
           / 星評価
