@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    resources :comments, only: %i[create edit update]
+    resources :comments, only: %i[create edit update destroy]
   end
 
   devise_scope :user do

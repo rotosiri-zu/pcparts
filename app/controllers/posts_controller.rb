@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   
   def update
     if @posts.user_id == current_user.id
-      @posts.update(set_posts)
+      @posts.update(post_params)
       if @posts.save
         flash[:success] = 'アイテムを更新しました'
         redirect_to root_path

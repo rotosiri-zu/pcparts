@@ -3,7 +3,7 @@
     %h1.h5.mb-4
       投稿の編集
 
-    = form_for @posts, url: posts_path, method: :post, remote: false do |f|
+    = form_for @posts, url: post_path, method: :patch, remote: false do |f|
       .form-group
         = f.label :image, '画像ファイル'
         = f.file_field :image, class: 'form-control-file'
