@@ -20,7 +20,4 @@
               });
           / /星評価
           %p= comment.content
-          .col-md-12.edit-button
-          - if user_signed_in? && current_user == @posts.user
-            = link_to '口コミを編集', edit_post_comment_path(@comments), method: :get, class:'btn btn-default'
-            = link_to '口コミを削除', post_comment_path(@comments), method: :delete, class:'btn btn-default'
+         
