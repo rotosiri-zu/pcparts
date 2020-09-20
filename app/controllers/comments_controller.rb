@@ -16,23 +16,9 @@ class CommentsController <  ApplicationController
   end
 
   def update
-    if @posts.user_id == current_user.id
-      @comment.update(comment_params)
-      if @comment.save
-        flash[:success] = '口コミを更新しました'
-        redirect_to root_path
-      else
-        flash.now[:danger] = '口コミの編集に失敗しました'
-        render :edit
-      end
-    end
   end
   
   def destroy
-    return unless @comment.destroy
-
-    flash[:success] = '口コミを削除しました'
-    redirect_back(fallback_location: root_path)
   end
 
   private
@@ -46,6 +32,6 @@ class CommentsController <  ApplicationController
   end
 
   def set_comment
-    @comment = Comment.find(params[:id])
+    @comment = Comment.find_by(id: params[:id])
   end
 end
