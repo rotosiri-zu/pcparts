@@ -22,8 +22,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @comment = Comment.new
-    @comments = Comment.includes(:user, :post).where(post_id: @posts.id).page(params[:page])
+    @comments = @posts.comments
+    @comment = current_user.comments.new
   end
 
   def edit

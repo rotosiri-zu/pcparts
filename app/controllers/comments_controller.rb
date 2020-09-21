@@ -1,6 +1,6 @@
 class CommentsController <  ApplicationController
   before_action :correct_user, only: %i[edit update]
-  before_action :set_comment, only: %i[edit update destroy]
+  before_action :set_comment, only: %i[edit update]
   def create
     @comments = Comment.create(comment_params)
     if @comments.save
@@ -13,12 +13,26 @@ class CommentsController <  ApplicationController
   end
 
   def edit
+    posts = Post.find(params[:post_id])
+    @comment = posts.comments.find(params[:id])
   end
 
   def update
+    if @comment.user_id == current_user.id
+      @comment.update(comment_params)
+      if @comment.save
+        flash[:success] = '口コミを更新しました'
+        redirect_to root_path
+      end
+    end  
   end
   
   def destroy
+    posts = Post.find(params[:post_id])
+    @comment = posts.comments.find(params[:id])
+    @comment.destroy
+    flash[:success] = '口コミを削除しました'
+    redirect_back(fallback_location: root_path)
   end
 
   private
