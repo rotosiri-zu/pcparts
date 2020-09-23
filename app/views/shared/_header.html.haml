@@ -11,6 +11,8 @@
             = f.text_field :title_cont, id: 'search', placeholder: '商品名検索'
             = button_tag type: 'submit', class: "search-btn" do
               = icon('fas', 'search')
+        %li.Introduction
+          %span はじめに
         %li.home
           = link_to root_path, class: "link-btn p-2 bg-primary text-white" do
             %i.fas.fa-home
