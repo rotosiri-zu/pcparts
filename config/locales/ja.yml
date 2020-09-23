@@ -1,5 +1,19 @@
 ja:
   activerecord:
+    models:
+      attributes:
+        user:
+          email: メールアドレス
+          password: パスワード
+        comment:
+          title: タイトル
+          content: 口コミ内容
+          rate: 評価
+        post:
+          title: タイトル
+          image: 画像ファイル
+          genre: ジャンル
+          price: 価格
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
