@@ -32,7 +32,6 @@ body {
     font-weight: bold;
   }
   nav.navbar.navbar-expand-lg.navbar-light{
-    margin-top: 10px;
     margin-left: auto;
   }
   .navbar{
@@ -43,6 +42,24 @@ body {
   }
   .Introduction{
     margin-right: 10px;
+    .btn{
+      margin: 0;
+    }
+  }
+  .home{
+    margin-top: 6px;
+  }
+  .post{
+    margin-top: 6px;
+  }
+  .nav-logout{
+    margin-top: 6px;
+  }
+  .nav-login{
+    margin-top: 6px;
+  }
+  .nav-sign{
+    margin-top: 6px;
   }
 }
 // 検索ボタン

@@ -12,13 +12,16 @@
             = button_tag type: 'submit', class: "search-btn" do
               = icon('fas', 'search')
         %li.Introduction
-          %span はじめに
+          %button.btn.btn-primary{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}
+            %i.fas.fa-leaf
+            %span はじめに
+          = render "posts/modal"
         %li.home
           = link_to root_path, class: "link-btn p-2 bg-primary text-white" do
             %i.fas.fa-home
             %span ホーム
         - if user_signed_in?
-          %li
+          %li.post
             = link_to new_post_path, class: "link-btn p-2 bg-primary text-white mt-4" do
               %i.far.fa-paper-plane
               %span 投稿
