@@ -1,0 +1,25 @@
+#exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title PCPARTへようこそ！
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        PCPARTは普段つかっているPCパーツやな購入したPCパーツを投稿して紹介しあうサイトです。
+        %ul
+          %li
+            %i.far.fa-address-book
+            会員登録
+            %p
+              登録することで、各種機能をつかえるようになります。投稿記事の閲覧は会員登録の必要なく行うことができます。
+          %li
+            %i.far.fa-paper-plane
+            投稿機能
+            %p
+              会員登録することで自由に投稿することができます。
+          %li
+            %i.far.fa-heart
+            口コミ機能
+            %p
+              PCパーツの感想を投稿できます。
