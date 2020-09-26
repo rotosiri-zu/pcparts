@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
 }
+
+/* body */
 body {
   padding: 0;
   margin: 0;
@@ -13,6 +15,8 @@ body {
     outline: none;
   }
 }
+
+/* header */
 .header{
   height: 50px;
   width: 100%;
@@ -62,6 +66,7 @@ body {
     margin-top: 6px;
   }
 }
+
 // 検索ボタン
 .search-bar{
   .container-2{
@@ -85,4 +90,19 @@ body {
     outline: 0;
     cursor: pointer;
   }
+}
+
+/*footer*/
+#footer{
+  background: #323a45;
+}
+
+#footer a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.d-block.mb-3{
+  color: #fff;
 }
