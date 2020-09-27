@@ -2,7 +2,11 @@
   .footer-content
     .container
       .row
-        .col-12.col-md
+        .col-md-3.col-sm-4.col-md-push-3
           = link_to "PCPART", root_path
           %smail.d-block.mb-3 © 2020
+        .col-md-3.col-sm-4.col-md-push-3
+          %ul
+            %li= link_to 'トップページ', root_path
+            %li= link_to '新規投稿画面', new_post_path
         
