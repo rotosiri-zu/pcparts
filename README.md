@@ -1,24 +1,31 @@
-# README
+# 【app_name】
+PCパーツ投稿サイト
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 【URL】
+https://pcparts-staging.herokuapp.com/
 
-Things you may want to cover:
+# 【企画背景】
+自作PCを作成している他のユーザーからの紹介で使用しているPCパーツや購入したもので作成するときのパーツ選びに参考になればと思い作りました。
 
-* Ruby version
+# 【使用言語、フレームワーク】
+- HTML/CSS(SCSS)
+- bootstrap
+- jquery
+- rails 5.2.4.3
+- ruby 2.6.6
+- postgres sql
+- GitHub
+- heroku
 
-* System dependencies
+# 【内容】
+- PCPARTをクリックするとホーム画面に戻る
+- ログインIDPW/ログアウト機能
+- 投稿機能
+- 詳細画面
+- 編集画面、更新機能
+- 削除機能
+- ページネーション機能
+- ransackによる検索機能
+- ゲストログイン機能
+- 口コミ投稿、一覧機能
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
