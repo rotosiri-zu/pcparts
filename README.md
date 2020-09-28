@@ -13,9 +13,11 @@ https://pcparts-staging.herokuapp.com/
 - jquery
 - rails 5.2.4.3
 - ruby 2.6.6
-- postgres sql
+
+# 【インフラ】
 - GitHub
 - heroku
+- postgres sql
 
 # 【内容】
 - PCPARTをクリックするとホーム画面に戻る
