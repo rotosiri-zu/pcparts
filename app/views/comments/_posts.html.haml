@@ -3,7 +3,7 @@
     .row.posts
       .col-md-6.mb-3
         .posts-content
-          %p 投稿日： #{comment.created_at.strftime("%Y/%m/%d %H:%M")} #{comment.user.nickname}
+          %p 投稿日： #{comment.created_at.try(:strftime,"%Y/%m/%d %H:%M")} #{comment.user.try(:nickname)}
           %h4.mb-3
             評価：#{comment.rate}点 | #{comment.title}
           / 星評価
@@ -21,6 +21,6 @@
           / /星評価
           %p= comment.content
         .col-md-12.edit-button
-          - if current_user == comment.user
+          - if user_signed_in? && current_user == comment.user
             = link_to '口コミを編集', edit_post_comment_path(id: comment.id, post_id: comment.post.id), method: :get, class:'btn btn-default'
-            = link_to '口コミを削除', post_comment_path(post_id: @posts, id: comment.id), method: :delete, class:'btn btn-default'
+            = link_to '口コミを削除', post_comment_path(post_id: comment.post.id, id: comment.id), method: :delete, class:'btn btn-default'

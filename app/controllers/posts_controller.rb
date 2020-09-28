@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create]
+  # before_action :authenticate_user!, only: [:show, :create]
   before_action :move_to_index, except: [:index, :show]
   before_action :set_posts, only: %i[show edit update destroy]
   
@@ -23,8 +23,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @comments = @posts.comments
-    @comment = current_user.comments.new
+    @comments = @posts.comments.order('created_at DESC').limit(10).page(params[:page]).per(26)
+    @comment = @posts.comments.new
   end
 
   def edit
