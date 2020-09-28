@@ -30,4 +30,3 @@ https://pcparts-staging.herokuapp.com/
 - ransackによる検索機能
 - ゲストログイン機能
 - 口コミ投稿、一覧機能
-
