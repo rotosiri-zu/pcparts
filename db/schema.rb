@@ -41,9 +41,11 @@ ActiveRecord::Schema.define(version: 2020_09_25_125654) do
     t.string "genre", null: false
     t.integer "price", null: false
     t.text "text", null: false
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
