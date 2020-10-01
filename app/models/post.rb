@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
-  belongs_to :user
-  belongs_to :category
+  belongs_to :user, optional: true
+  belongs_to :category, optional: true
   # コメント
   has_many :comments, dependent: :destroy
 
