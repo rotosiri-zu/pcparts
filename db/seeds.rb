@@ -14,7 +14,7 @@ end
 
 Post.create!(
   title: 'テスト',
-  genre: 'マザーボード',
+  category_id: 2,
   price: 35527,
   text: 'テスト',
   image: File.open('./app/assets/images/0192876671627_A01.jpg')

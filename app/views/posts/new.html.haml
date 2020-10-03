@@ -11,8 +11,8 @@
         = f.label :title, '商品名'
         = f.text_field :title, class: 'form-control'
       .form-group
-        = f.label :genre, 'ジャンル'
-        = f.select :genre, [["cpu", "cpu"], ["マザーボード", "マザーボード"], ["グラフィックボード", "グラフィックボード"], ["メモリー", "メモリー"], ["内部HDD・SSD", "内部HDD・SSD"], ["光学ドライブ・その他のドライブ", "光学ドライブ・その他のドライブ"], ["PC電源","PC電源"], ["PCケース", "PCケース"], ["クーラー・ファン・冷却", "クーラー・ファン・冷却"], ["その他のパーツ・ケーブル・アクセサリー", "その他のパーツ・ケーブル・アクセサリー"]], include_blank: "選択して下さい", class: 'form-group-text'
+        = f.label :category_id, 'カテゴリー'
+        = f.collection_select :category_id, Category.all, :id, :name, :include_blank => "カテゴリを選択してください"  , class: 'form-group-text'
       .form-group
         = f.label :price, '値段'
         = f.number_field :price, class: 'form-group-text'
