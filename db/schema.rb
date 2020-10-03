@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 2020_09_25_125654) do
   create_table "posts", force: :cascade do |t|
     t.string "image", null: false
     t.string "title", null: false
-    t.string "genre", null: false
     t.integer "price", null: false
     t.text "text", null: false
     t.bigint "category_id"

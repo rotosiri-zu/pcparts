@@ -55,9 +55,9 @@ class PostsController < ApplicationController
     params.require(:post).permit(
       :image,
       :title,
-      :genre,
       :price,
-      :text
+      :text,
+      :category_id
     ).merge(user_id: current_user.id)
   end
 
