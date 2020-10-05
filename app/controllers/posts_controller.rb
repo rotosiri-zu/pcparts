@@ -17,6 +17,7 @@ class PostsController < ApplicationController
       flash[:success] = 'アイテムを登録しました'
       redirect_to root_path
     else
+      flash[:success] = 'アイテムを登録できませんでした、記入項目を確認してください'
       render :new
     end
   end

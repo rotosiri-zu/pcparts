@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_09_25_125654) do
 
   create_table "comments", force: :cascade do |t|
     t.string "title", null: false
-    t.string "rate", null: false
+    t.float "rate", null: false
     t.text "content", null: false
     t.bigint "user_id"
     t.bigint "post_id"
