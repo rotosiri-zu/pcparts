@@ -7,8 +7,8 @@ class CommentsController <  ApplicationController
       flash[:success] = '口コミを投稿しました'
       redirect_to root_path
     else
-      flash.now[:danger] = '口コミの投稿に失敗しました'
-      render 'posts/show'
+      flash[:danger] = '口コミの投稿に失敗しました'
+      redirect_back(fallback_location: root_path)
     end
   end
 
@@ -23,6 +23,9 @@ class CommentsController <  ApplicationController
       if @comment.save
         flash[:success] = '口コミを更新しました'
         redirect_to root_path
+      else
+        flash[:danger] = '口コミの更新に失敗しました'
+        redirect_back(fallback_location: root_path)
       end
     end  
   end
