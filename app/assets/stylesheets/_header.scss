@@ -1,74 +1,36 @@
-.header{
-  height: 50px;
-  width: 100%;
+.navbar.navbar-expand-lg.navbar-light{
   background-color: beige;
   display: flex;
   z-index: 1;
   border-bottom: 2px solid black;
-  a {
+  .nav-link {
     margin-right: 10px;
     color: black;
     text-decoration: none;
   }
-  &_title {
-    line-height: 50px;
-    font-size: 30px;
-    padding-left: 20px;
-    font-weight: bold;
-  }
-  nav.navbar.navbar-expand-lg.navbar-light{
-    margin-left: auto;
-  }
-  .navbar{
-    padding: 0;
-    .navbar-toggler{
-      padding-top: 0;
+  // 検索ボタン
+  .search-bar{
+    .container-2{
+      vertical-align: middle;
+      white-space: nowrap;
+      position: relative;
+      margin:0 auto;
     }
-  }
-  .Introduction{
-    margin-right: 10px;
-    .btn{
-      margin: 0;
+    .container-2 input#search{
+      margin-right: 10px;
+      text-align: center;
+      border-radius: 35px;
+      outline: none;
     }
-  }
-  .home{
-    margin-top: 6px;
-  }
-  .post{
-    margin-top: 6px;
-  }
-  .nav-logout{
-    margin-top: 6px;
-  }
-  .nav-login{
-    margin-top: 6px;
-  }
-  .nav-sign{
-    margin-top: 6px;
+    .search-btn{
+      position: absolute;
+      left: 0;
+      border: none;
+      background: none;
+      font-size: 20px;
+      outline: 0;
+      cursor: pointer;
+    }
   }
 }
 
-// 検索ボタン
-.search-bar{
-  .container-2{
-    vertical-align: middle;
-    white-space: nowrap;
-    position: relative;
-    margin:0 auto;
-  }
-  .container-2 input#search{
-    margin-right: 10px;
-    text-align: center;
-    border-radius: 35px;
-    outline: none;
-  }
-  .search-btn{
-    position: absolute;
-    left: 0;
-    border: none;
-    background: none;
-    font-size: 20px;
-    outline: 0;
-    cursor: pointer;
-  }
-}

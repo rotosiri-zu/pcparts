@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
   before_action :set_posts, only: %i[show edit update destroy]
   
   def index
-    @posts = Post.all
-    @posts = Post.order("created_at").limit(26)
+    @number = 26
+    @posts = Post.order("created_at").limit(@number)
   end
 
   def new
@@ -63,10 +62,5 @@ class PostsController < ApplicationController
 
   def set_posts
     @posts = Post.find(params[:id])
-  end
-
-  def move_to_index
-    redirecto_to action: :index unless
-    user_signed_in?
   end
 end  
