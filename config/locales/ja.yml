@@ -1,6 +1,9 @@
 ja:
   activerecord:
     models:
+      user: ユーザー
+      post: アイテム
+      comment: 口コミ
       attributes:
         user:
           email: メールアドレス
@@ -12,7 +15,7 @@ ja:
         post:
           title: タイトル
           image: 画像ファイル
-          genre: ジャンル
+          category_id: ID
           price: 価格
     errors:
       messages:
