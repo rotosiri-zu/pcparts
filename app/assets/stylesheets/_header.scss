@@ -1,4 +1,4 @@
-.navbar.navbar-expand-lg.navbar-light{
+.navbar.navbar-expand-lg.navbar-light.navbar-right{
   background-color: beige;
   display: flex;
   z-index: 1;
@@ -33,4 +33,23 @@
     }
   }
 }
-
+.header{
+  &_title {
+    line-height: 50px;
+    font-size: 30px;
+    padding-left: 20px;
+    font-weight: bold;
+  }
+  .navbar.navbar-default{
+    margin-left: auto;
+  }
+  .container{
+    padding-top: 0;
+  }
+  .navbar{
+    padding: 0;
+    .navbar-toggler{
+      padding-top: 0;
+    }
+  }
+}
