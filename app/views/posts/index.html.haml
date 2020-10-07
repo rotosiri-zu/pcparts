@@ -1,14 +1,46 @@
 %main.main
-  .container
-    .row
-      .post
-      - @posts.each do |post|
-        .col-lg-3.col-md-6
-          .card
-            = image_tag post.image.url, class: "card-img-top"
-            .card-body
-              %h5.card-title= (post.title)
-              %p.card-genre= (post.category.name)
-              %span.card-price= "¥#{post.price.to_s(:delimited)}"
-              .border.border-white.mt-4
-                = link_to "詳細へ", post_path(post), class: "btn btn-primary" 
+  %section.jumbotron.text-center
+    .container
+    %h1.jumbotron-heading PCPARTへようこそ！
+    %p.lead
+      PCPARTは普段つかっているPCパーツやな購入したPCパーツを投稿して紹介しあうサイトです。
+      %ul
+        %li
+          %i.far.fa-address-book
+          会員登録
+          %p
+            登録することで、各種機能をつかえるようになります。投稿記事の閲覧は会員登録の必要なく行うことができます。
+        %li
+          %i.far.fa-paper-plane
+          投稿機能
+          %p
+            会員登録することで自由に投稿することができます。
+        %li
+          %i.far.fa-star
+          口コミ機能
+          %p
+            PCパーツの感想を投稿できます。
+        %li
+          マイページ機能
+          %p
+            ユーザーが投稿したアイテム一覧を確認することができます。
+        %li
+          ログイン機能
+          %p
+            登録したユーザーやゲストログインでログインできます。ホーム画面からもゲストログインでログインすることができます。
+    .text-btn
+      = link_to 'ゲストログインでログインする', users_guest_sign_in_path, method: :post, class: "btn btn-primary my-2"
+  .album.py-5
+    .container
+      .row
+        .post
+        - @posts.each do |post|
+          .col-lg-3.col-md-6
+            .card
+              = image_tag post.image.url, class: "card-img-top"
+              .card-body
+                %h5.card-title= (post.title)
+                %p.card-genre= (post.category.name)
+                %span.card-price= "¥#{post.price.to_s(:delimited)}"
+                .border.border-white.mt-4
+                  = link_to "詳細へ", post_path(post), class: "btn btn-primary" 
