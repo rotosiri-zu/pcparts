@@ -24,8 +24,20 @@
     }
   }
 }
-.p-3{
+.card-body{
+  .card-title{
+    font-size: 30px;
+  }
+}
+.p-3.border{
+  border: 1px solid black !important;
   .mb-3{
     text-align: center;
+    font-size: 30px;
+  }
+}
+.row.posts{
+  .posts-content{
+    margin-top: 10px;
   }
 }

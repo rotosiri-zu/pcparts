@@ -11,5 +11,7 @@
     = render 'shared/header'
     .container
       = render 'layouts/flash_messages'
-    = yield
-    = render 'shared/footer'
+    .content
+      = yield
+    %footer.footer
+      = render 'shared/footer'
