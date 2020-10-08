@@ -51,6 +51,8 @@ class PostsController < ApplicationController
     end  
   end  
 
+  def select_category_index
+  end
   private
   
   def post_params
