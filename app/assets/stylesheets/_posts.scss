@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 /* body */
 body {
   padding: 0;
@@ -11,7 +10,6 @@ body {
   font-family: 'Noto Sans Japanese',
   'Source Sans Pro', Helvetica , Arial,
   '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-  width: 100%;
   a, input{
     outline: none;
   }
@@ -19,6 +17,7 @@ body {
 main{
   .jumbotron.text-center{
     background-color: white;
+    border-bottom:px solid black;
   }
   .jumbotron-heading{
     font-weight: 300;
@@ -31,5 +30,4 @@ main{
     margin-top: 10px;
     margin-bottom: 10px;
   }
-
 }
