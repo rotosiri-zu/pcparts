@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :posts do 
     collection do
       get 'search'
+      get 'select_category_index'
     end
     resources :comments, only: %i[create edit update destroy]
   end
