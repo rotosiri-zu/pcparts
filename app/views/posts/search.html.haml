@@ -1,5 +1,6 @@
 .container
   .row
+  - if @search.any?
     - @search.each do |post|
       .col-lg-3.col-md-6
         .card
@@ -10,3 +11,5 @@
             %span.card-price= (post.price)
             .border.border-white.mt-4
               = link_to "詳細へ", post_path(post), class: "btn btn-primary" 
+  - else
+    %h1 検索に一致する商品はありませんでした
