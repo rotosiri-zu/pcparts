@@ -49,10 +49,8 @@ class PostsController < ApplicationController
       @posts.destroy
       redirect_to root_path
     end  
-  end  
-
-  def select_category_index
   end
+
   private
   
   def post_params
