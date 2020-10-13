@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   resources :posts do 
     collection do
       get 'search'
-      get 'select_category_index'
     end
     resources :comments, only: %i[create edit update destroy]
   end
@@ -18,6 +17,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
-
-  resources :categories, only: [:index, :show]
+  namespace :api do
+    resources :category, only: [:index, :show]
+  end
 end
