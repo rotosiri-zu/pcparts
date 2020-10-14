@@ -31,11 +31,10 @@
               %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
                 カテゴリーから選ぶ
               .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-                .contents__bottom
-                  .header-bottom-left
-                    .header-bottom-left-category
-                      = link_to "", api_category_path(0) ,class: "category_name", id: "catroy_top_title"
-                      .header-bottom-left-category-field
+                - @category_parent_array.each do |parent|
+                  .TopHeader__Inner__Lists__Left__Category__ParentCategories__List{data: {id: "#{parent.id}"}}
+                    = link_to "#{parent.name}",category_index_path(parent), class: "parent_category",id: "#{parent.id}"
+                  .children_list
             %li.nav-item
               = link_to destroy_user_session_path, method: :delete, class: "nav-link" do
                 %i.fa.fa-user-minus
