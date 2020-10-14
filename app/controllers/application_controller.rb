@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     @q = Post.ransack(params[:q])
     @search = @q.result(distinct: true).order(created_at: "DESC").includes(:user).page(params[:page]).per(5)
   end
-
+  
   def set_category_list
     @category_parent_array = Category.where(ancestry: nil)
   end
