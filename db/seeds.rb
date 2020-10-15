@@ -11,12 +11,17 @@ require "csv"
 CSV.foreach('db/category.csv') do |row|
   Category.create(:id => row[0], :name => row[1], :ancestry => row[2])
 end
-
+  
 Post.create!(
   title: 'テスト',
-  category_id: 2,
+  category_id:  1,
   price: 35527,
   text: 'テスト',
-  image: File.open('./app/assets/images/0192876671627_A01.jpg')
+  image: File.open('./app/assets/images/0735858392426.jpg')
 )
 
+Comment.create(
+  title: 'テスト',
+  rate: 5,
+  content: 'テスト' 
+)
