@@ -29,6 +29,9 @@
           %p
             登録したユーザーやゲストログインでログインできます。ホーム画面からもゲストログインでログインすることができます。
     .text-btn
+    - if user_signed_in?
+      = link_to '', root_path
+    - else
       = link_to 'ゲストログインでログインする', users_guest_sign_in_path, method: :post, class: "btn btn-primary my-2"
   .album.py-5
     .container
