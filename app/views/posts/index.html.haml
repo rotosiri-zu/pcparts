@@ -33,17 +33,4 @@
       = link_to '', root_path
     - else
       = link_to 'ゲストログインでログインする', users_guest_sign_in_path, method: :post, class: "btn btn-primary my-2"
-  .album.py-5
-    .container
-      .row
-        .post
-        - @posts.each do |post|
-          .col-lg-3.col-md-6
-            .card
-              = image_tag post.image.url, class: "card-img-top"
-              .card-body
-                %h5.card-title= (post.title)
-                %p.card-genre= (post.category.name)
-                %span.card-price= "¥#{post.price.to_s(:delimited)}"
-                .border.border-white.mt-4
-                  = link_to "詳細へ", post_path(post), class: "btn btn-primary" 
+  = render 'posts/posts'
