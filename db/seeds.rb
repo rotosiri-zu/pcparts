@@ -13,11 +13,22 @@ CSV.foreach('db/category.csv') do |row|
 end
   
 Post.create!(
-  title: 'テスト',
-  category_id:  1,
-  price: 35527,
-  text: 'テスト',
-  image: File.open('./app/assets/images/0735858392426.jpg')
+  [
+  {
+    title: 'Core i9-9900K BOX品',
+    category_id:  1,
+    price: 49478,
+    text: 'テスト',
+    image: File.open('./app/assets/images/0735858392426.jpg')
+  },
+  {
+    title: 'ゲーミングマザーボード ROG STRIX Z490-E GAMING ［ATX /LGA1200］',
+    category_id:  3,
+    price: 35525,
+    text: 'テスト',
+    image: File.open('./app/assets/images/0192876671627_A01.jpg')
+  }
+]
 )
 
 Comment.create(
