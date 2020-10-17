@@ -34,6 +34,13 @@ Post.create!(
     price: 16500,
     text: 'テスト',
     image: File.open('./app/assets/images/0824142222973.jpg')
+  },
+  {
+    title: 'D3U1600PS-8G (240pin/DDR3-1600/8GB)',
+    category_id:  5,
+    price: 3127,
+    text: 'テスト',
+    image: File.open('./app/assets/images/4988755019972.jpg')
   }
 ]
 )
