@@ -12,7 +12,7 @@
         = f.text_field :title, class: 'form-control'
       .form-group
         = f.label :category_id, 'カテゴリー'
-        = f.text_field :category_id, class: 'form-group-text'
+        = f.collection_select :category_id, Category.all, :id, :name, :include_blank => "カテゴリを選択してください"  , class: 'form-group-text'
       .form-group
         = f.label :price, '値段'
         = f.number_field :price, class: 'form-group-text'
