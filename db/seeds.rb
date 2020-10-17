@@ -27,6 +27,13 @@ Post.create!(
     price: 35525,
     text: 'テスト',
     image: File.open('./app/assets/images/0192876671627_A01.jpg')
+  },
+  {
+    title: 'グラフィックボード GeForce GTX 1650 D6 VENTUS XS OCV1 ［4GB /GeForce GTXシリーズ］',
+    category_id:  4,
+    price: 16500,
+    text: 'テスト',
+    image: File.open('./app/assets/images/0824142222973.jpg')
   }
 ]
 )
