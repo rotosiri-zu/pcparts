@@ -9,7 +9,7 @@
 require "csv"
 
 CSV.foreach('db/category.csv') do |row|
-  Category.create(:name => row[0], :ancestry => row[1])
+  Category.create(:id => row[0], :name => row[1], :ancestry => row[2])
 end
   
 Post.create!(
@@ -40,7 +40,7 @@ Post.create!(
     category_id:  5,
     price: 3127,
     text: 'テスト',
-    image: File.open('./app/assets/images/4988755019972.jpg')
+    image: File.open('./app/assets/images/')
   }
 ]
 )
