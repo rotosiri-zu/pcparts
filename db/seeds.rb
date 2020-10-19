@@ -12,7 +12,7 @@ CSV.foreach('db/category.csv', headers: true) do |row|
   Category.create(name: row['name'], ancestry: row['ancestry'])
 end
   
-Post.create(
+Post.create!(
   [
     {
       title: 'Core i9-9900K BOX品',
