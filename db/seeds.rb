@@ -45,6 +45,7 @@ category.post.create!(
     }
   ]
 )
+end
 
 Comment.create(
   title: 'テスト',
