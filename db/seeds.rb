@@ -13,7 +13,7 @@ CSV.foreach('db/category.csv', headers: true) do |row|
 end
   
 Category.all.each do |category|
-category.post.create!(
+category.posts.create!(
   [
     {
       title: 'Core i9-9900K BOX品',
