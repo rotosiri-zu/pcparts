@@ -12,7 +12,8 @@ CSV.foreach('db/category.csv') do |row|
   Category.create(id: row[0], name: row[1], ancestry: row[2])
 end
   
-Post.create!(
+Categorys.all.each do |category|
+category.post.create!(
   [
     {
       title: 'Core i9-9900K BOX品',
@@ -44,6 +45,7 @@ Post.create!(
     }
   ]
 )
+end
 
 Comment.create(
   title: 'テスト',
