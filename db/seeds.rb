@@ -17,28 +17,28 @@ Category.all.each do |category|
     [
       {
         title: 'Core i9-9900K BOX品',
-        name:  'intel(インテル)',
+        name:  'intel(インテル)',category_id: 1,
         price: 49478,
         text: 'テスト',
         image: File.open('./app/assets/images/0735858392426.jpg')
       },
       {
         title: 'ゲーミングマザーボード ROG STRIX Z490-E GAMING ［ATX /LGA1200］',
-        name:  'マザーボード',
+        name:  'マザーボード'category_id: 2,
         price: 35525,
         text: 'テスト',
         image: File.open('./app/assets/images/0192876671627_A01.jpg')
       },
       {
         title: 'グラフィックボード GeForce GTX 1650 D6 VENTUS XS OCV1 ［4GB /GeForce GTXシリーズ］',
-        name:  'グラフィックボード',
+        name:  'グラフィックボード',category_id: 3,
         price: 16500,
         text: 'テスト',
         image: File.open('./app/assets/images/0824142222973.jpg')
       },
       {
         title: 'D3U1600PS-8G (240pin/DDR3-1600/8GB)',
-        name:  'メモリー',
+        name:  'メモリー',category_id: 1,
         price: 3127,
         text: 'テスト',
         image: File.open('./app/assets/images/4988755019972.jpg')
