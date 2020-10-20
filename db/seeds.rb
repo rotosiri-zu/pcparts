@@ -8,8 +8,8 @@
 
 require "csv"
 
-CSV.foreach('db/category.csv', headers: true) do |row|
-  Category.create(name: row['name'], ancestry: row['ancestry'])
+CSV.foreach('db/category.csv') do |row|
+  Category.create(id: row[0] name: row[1], ancestry: row[2])
 end
   
 # Post.create!(
