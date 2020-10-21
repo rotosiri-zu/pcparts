@@ -13,7 +13,7 @@ CSV.foreach('db/category.csv') do |row|
 end
   
 Post.all.each do |post|
-  post.categories.create_author(
+  post.category.create_author(
     [
       {
         title: 'Core i9-9900K BOX品',
