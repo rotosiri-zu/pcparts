@@ -44,9 +44,3 @@ Post.create!(
     }
   ]
 )
-
-Comment.create(
-  title: 'テスト',
-  rate: 5,
-  content: 'テスト' 
-)
