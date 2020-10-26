@@ -9,7 +9,7 @@ https://pcparts-staging.herokuapp.com/
 
 # 【使用言語、フレームワーク】
 - HTML/CSS(SCSS)
-- bootstrap
+- bootstrap4
 - jquery
 - rails 5.2.4.3
 - ruby 2.6.6
