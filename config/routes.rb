@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   root to: 'posts#index'
+  get 'policy', to: 'foorters#policy'
+  get 'privacypolicy', to: 'foorters#privacypolicy'
   
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
+  
   resources :users, only: %i[show] do
   end
 
@@ -18,6 +21,5 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
   
-  resources :foorters, only: [:policy, :privacypolicy]
-    resources :categories, only: [:index, :show]
+  resources :categories, only: [:index, :show]
 end
