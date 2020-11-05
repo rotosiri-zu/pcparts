@@ -23,6 +23,7 @@ RSpec.describe "Posts", type: :system do
     attach_file 'post[image]', "#{Rails.root}/spec/fixtures/test.jpg"
     fill_in 'post[title]', with: 'テスト'
     select('カテゴリを選択してください', from: 'post_category_id')
+    page.fill_in 'post[price]', with: '000'
     
   end
 end

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   
   def index
     @number = 26
-    @posts = Post.order("created_at").limit(@number)
+    @posts = Post.order("created_at DESC").limit(@number)
   end
 
   def new
