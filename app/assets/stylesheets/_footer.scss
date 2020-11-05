@@ -14,9 +14,13 @@ footer{
     }
   }
   .col-md-3.col-sm-4.col-md-push-3{
-    a{
-      color: #fff;
-      text-decoration: none;
+    li{
+      margin: 0 0 14px 0;
+      line-height: 16px;
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
     }
   }
 }
