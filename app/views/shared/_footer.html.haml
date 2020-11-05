@@ -1,11 +1,12 @@
 .container.py-5
   .row
-    .col-md-3.col-sm-4.col-md-push-3
-      = link_to "PCPART", root_path
-      %smail.d-block.mb-3 © 2020
+    .col-md-3.col-sm-12.col-md-push-9
+      .footer-logo
+        = link_to "PCPART", root_path
+      %p
+        %smail.d-block.mb-3 © 2020. All Rights Reserved.
     .col-md-3.col-sm-4.col-md-push-3
       %ul
         %li= link_to 'トップページ', root_path
-        %li= link_to '', 
-        
-    
+        %li= link_to '利用契約', policy_path
+        %li= link_to 'プライバシーポリシー', privacypolicy_path
