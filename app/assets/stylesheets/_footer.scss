@@ -6,11 +6,19 @@ footer{
   .container.py-5{
     padding-bottom: 100px;
   }
-  a{
-   color: #fff;
-   text-decoration: none;
-   font-size: 30px;
- }
+  .footer-logo{
+    a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 30px;
+    }
+  }
+  .col-md-3.col-sm-4.col-md-push-3{
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 }
 .d-block.mb-3{
   color: #fff;

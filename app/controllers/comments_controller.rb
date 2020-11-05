@@ -1,4 +1,4 @@
-class CommentsController <  ApplicationController
+class CommentsController < ApplicationController
   before_action :correct_user, only: %i[edit update]
   before_action :set_comment, only: %i[edit update]
   def create
