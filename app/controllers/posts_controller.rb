@@ -23,7 +23,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @comments = @posts.comments.order('created_at DESC').limit(10).page(params[:page]).per(26)
+    @number = 10
+    @comments = @posts.comments.order('created_at DESC').limit(@number).page(params[:page]).per(26)
     @comment = @posts.comments.new
   end
 
