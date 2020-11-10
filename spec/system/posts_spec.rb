@@ -25,5 +25,7 @@ RSpec.describe "Posts", type: :system do
     select('カテゴリを選択してください', from: 'post_category_id')
     page.fill_in 'post[price]', with: '000'
     fill_in 'post[text]', with: 'テスト'
+    click_button '投稿'
+    visit root_path
   end
 end
