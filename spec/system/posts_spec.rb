@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "Posts", type: :system do
   let(:post) {FactoryBot.create(:post)}
   let(:user) { FactoryBot.create(:user) }
+  let(:csv_file) { 'test.csv' }
   let(:category) {FactoryBot.create(:category)}
 
   it '新規投稿したあと、その投稿を編集して最後に削除する' do
