@@ -4,7 +4,7 @@ FactoryBot.define do
     title {'テスト'}
     price {49478}
     text {'テスト'}
-    association :category
     association :user
+    association :category
   end
 end
