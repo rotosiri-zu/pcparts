@@ -6,9 +6,15 @@ RSpec.describe "Posts", type: :request do
   let(:post_a) {FactoryBot.attributes_for(:post, user_id: user.id, category_id: category.id)}
 
   describe "GET#index" do
+    let(:post) { FactoryBot.create(:post, user_id: user.id, category_id: category.id) }
     it "リクエストが成功すること" do
-      get posts_path
+      get posts_path post
       expect(response).to have_http_status(200)
+    end
+
+    it 'アイテム画像が表示されていること' do
+      get posts_path post
+      expect(response.body).to include "test.jpg"
     end
   end
 
@@ -28,7 +34,18 @@ RSpec.describe "Posts", type: :request do
         expect(response).to have_http_status 302
       end
 
-      
+      it 'アイテムの登録に成功すること' do
+        expect do
+          sign_in user
+          post posts_path, params: { post: post_params }
+        end.to change(Post, :count).by(1)
+      end
+
+      it 'リダイレクトすること' do
+        sign_in user
+        post posts_path, params: { post: post_params }
+        expect(response).to redirect_to(root_path)
+      end
     end
 
     context 'パラメータが不正な場合' do
@@ -42,6 +59,12 @@ RSpec.describe "Posts", type: :request do
       it 'アイテムの登録に失敗すること' do
         sign_in user
         post posts_path, params: { post: post_params }
+        expect{post_params}.to_not change(Post, :count)
+      end
+
+      it 'エラーが表示されること' do
+        sign_in user
+        post posts_path, params: { post: post_params }
         within '#error_explanation' do
           expect(page).to have_content 'アイテムの登録に失敗しました。'
         end
@@ -49,11 +72,25 @@ RSpec.describe "Posts", type: :request do
     end
   end
   
-  describe 'GET #edit' do
+  describe 'GET #show' do
+    let(:post) { FactoryBot.create(:post, user_id: user.id, category_id: category.id) }
     it 'リクエストが成功すること' do
-      post = FactoryBot.create(:post, user_id: user.id, category_id: category.id)
-      get edit_post_path(post)
+      sign_in user
+      post post_path post
+      expect(response).to have_http_status 302
+    end
+  end
+
+  describe 'GET #edit' do
+    let(:post) { FactoryBot.create(:post, user_id: user.id, category_id: category.id) }
+    it 'リクエストが成功すること' do
+      get edit_post_path post
       expect(response.status).to eq 200
+    end
+
+    it 'アイテムのタイトルが表示されていること' do
+      get edit_post_path post
+      expect(response.body).to include "テスト"
     end
   end
 end
