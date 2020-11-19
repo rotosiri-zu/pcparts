@@ -76,8 +76,13 @@ RSpec.describe "Posts", type: :request do
     let(:post) { FactoryBot.create(:post, user_id: user.id, category_id: category.id) }
     it 'リクエストが成功すること' do
       sign_in user
-      post post_path post
-      expect(response).to have_http_status 302
+      get post_path post
+      expect(response.status).to eq 200
+    end
+
+    it 'アイテム画像が表示されていること' do
+      get posts_path post
+      expect(response.body).to include "test.jpg"
     end
   end
 
@@ -91,6 +96,23 @@ RSpec.describe "Posts", type: :request do
     it 'アイテムのタイトルが表示されていること' do
       get edit_post_path post
       expect(response.body).to include "テスト"
+    end
+  end
+
+  describe 'Patch #update' do
+    context 'パラメータが妥当な場合' do
+      let(:post_params) {post_a}
+      let(:post) { FactoryBot.create(:post, user_id: user.id, category_id: category.id, title: 'テスト_a') }
+      it 'リクエストが成功すること' do
+        sign_in user
+        patch post_path post, params: { post: post_params }
+        expect(response.status).to eq 200
+      end
+      it 'アイテムタイトルが更新されること' do
+        sign_in user
+        patch post_path post, params: { post: post_params }
+        expect(post.reload.title).to eq 'テスト_a'
+      end
     end
   end
 end
