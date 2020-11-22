@@ -140,6 +140,24 @@ RSpec.describe "Posts", type: :request do
   end
 
   describe 'DELETE #destroy' do
-  
+    let(:post) { FactoryBot.create(:post, user_id: user.id, category_id: category.id) }
+    it 'リクエストが成功すること' do
+      sign_in user
+      delete post_path post
+      expect(response.status).to eq 302
+    end
+
+    it 'アイテムが削除されること' do
+      expect do
+        sign_in user
+        delete post_path post
+      end.to change(Post, :count).by(0)
+    end
+    
+    it 'トップページにリダイレクトすること' do
+      sign_in user
+      delete post_path post
+      expect(response).to redirect_to(root_path)
+    end
   end
 end
