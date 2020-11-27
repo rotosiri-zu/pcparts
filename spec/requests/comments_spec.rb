@@ -54,5 +54,21 @@ RSpec.describe "Comments", type: :request do
       get edit_post_comment_path(post_id: post_a.id, id: comment.id)
       expect(response.status).to eq 200
     end
+    it '口コミのタイトルが表示されていること' do
+      sign_in user
+      get edit_post_comment_path(post_id: post_a.id, id: comment.id)
+      expect(response.body).to include "テスト"
+    end
+  end
+  
+  describe 'Pathc #update' do
+    let(:comment) { FactoryBot.create(:comment, user: user, post_id: post_a.id, title: 'テスト_a') }
+    context 'パラメータが妥当な場合' do
+      it 'リクエストが成功すること' do
+        sign_in user
+        patch post_comment_path(post_id: post_a.id, id: comment.id), params: { comment: comment_a }
+        expect(response.status).to eq 302
+      end
+    end
   end
 end
