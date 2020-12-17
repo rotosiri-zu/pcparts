@@ -1,10 +1,14 @@
 # 【app_name】
 PCパーツ投稿サイト
+![demo](https://github.com/rotosiri-zu/pcparts/issues/205#issue-769770471)
 
-# 【URL】
+# 【ポートフォリオURL】
 https://pcparts-staging.herokuapp.com/
 
-# 【企画背景】
+なお、各機能や使用技術を紹介した記事をQiitaにも投稿しました。
+https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
+
+# 【開発した背景】
 趣味で自作PCを作成したりしているのですが自分が知らないPCパーツのスペックをしりたい他のユーザーはどんなPCパーツを使っているのか気になり、自作PCを作成している他のユーザーからの紹介で使用しているPCパーツや購入したもので作成するときのパーツ選びに参考になればと思いWebアプリを作りました。
 
 # 苦労した点
