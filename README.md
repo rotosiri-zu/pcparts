@@ -71,13 +71,13 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 ![1b3fedbfed2ba3dca6fd34f10a117d3f](https://user-images.githubusercontent.com/55967256/97288584-62140f00-1889-11eb-85c3-dda2f66fd1fb.gif)
 
 # 口コミ投稿機能
-PCパーツの感想を投稿できます。
-入力に誤りがあれば、投稿はされずエラ-メッセージが表示されます。
+- PCパーツの感想を投稿できます。
+- 入力に誤りがあれば、投稿はされずエラ-メッセージが表示されます。
 
 ![2020-10-2720 33 12](https://user-images.githubusercontent.com/55967256/97299177-e7062500-1897-11eb-9600-1c2334678ed9.gif)
 
 # 口コミ更新・削除機能
-投稿した口コミを更新・削除ができます。
+- 投稿した口コミを更新・削除ができます。
 
 ![2020-10-2620 24 43](https://user-images.githubusercontent.com/55967256/97303868-5252f580-189e-11eb-9c4b-d68c112638aa.gif)
 
