@@ -1,6 +1,6 @@
 # 【app_name】
 PCパーツ投稿サイト
-![demo](https://github.com/rotosiri-zu/pcparts/issues/205#issue-769770471)
+![circleanimationmuvie](https://github.com/rotosiri-zu/pcparts/issues/205#issue-769770471)
 
 # 【ポートフォリオURL】
 https://pcparts-staging.herokuapp.com/
