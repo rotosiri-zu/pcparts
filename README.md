@@ -1,6 +1,8 @@
-# 【app_name】
-PCパーツ投稿サイト
+# 【PCパーツ投稿サイト】
 ![demo](https://raw.github.com/wiki/rotosiri-zu/pcparts/images/c5a059a879d7ec3ea13ef0e5ad90ec99.gif)
+
+PCパーツ投稿サイトはユーザーが使用しているパーツやユーザーが購入したパーツを投稿できます。
+パーツを使用した感想を口コミで投稿できます。
 
 # 【ポートフォリオURL】
 https://pcparts-staging.herokuapp.com/
@@ -33,6 +35,7 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 # 【内容】
 - PCPARTをクリックするとホーム画面に戻る
 - ログインIDPW/ログアウト機能
+
 - 投稿機能
 - 詳細画面
 - 編集画面、更新機能
