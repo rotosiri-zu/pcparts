@@ -32,6 +32,10 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 - heroku
 - postgres sql
 
+# 【ER図】
+
+![スクリーンショット 2020-12-28 19.07.04.png](./public/Database.png)
+
 # 【機能一覧】
 - PCPARTをクリックするとホーム画面に戻る
 # ログイン/ログアウト機能
