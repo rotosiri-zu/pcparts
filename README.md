@@ -30,7 +30,7 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 # 【インフラ】
 - GitHub
 - heroku
-- postgres sql
+- postgresql
 
 # 【ER図】
 
