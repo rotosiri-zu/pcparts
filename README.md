@@ -86,4 +86,5 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 ![2020-10-2620 24 43](https://user-images.githubusercontent.com/55967256/97303868-5252f580-189e-11eb-9c4b-d68c112638aa.gif)
 
 - ページネーション機能
-- rspec(単体テスト、総合テスト)
+- 単体・統合テスト(RSpec, Capybara)
+- 星評価機能(jQuery Raty)
