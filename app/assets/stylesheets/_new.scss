@@ -1,3 +1,17 @@
-.h5.mb-4{
-  text-align: center;
+.container.mt-4{
+  .h5.mb-4{
+    text-align: center;
+  }
+  .price_yen_sign{
+    margin-right: 10px;
+    margin-left: auto;
+  }
+
+  .price_number{
+    text-align: right;
+  }
+
+  .button{
+    text-align: right;
+  }
 }
