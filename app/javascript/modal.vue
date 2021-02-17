@@ -1,8 +1,8 @@
 <template>
   <div>
-    <span class="modal_span" @click="isShow = !isShow">機能説明</span>
+    <span class="modal_span" @click.prevent="isShow = !isShow" v-cloak>機能説明</span>
 
-    <transition>
+    <transition name="fade">
       <div v-show="isShow">
         <div class="modal__inner">
           <div class="modal__close" @click="isShow = !isShow"><i class="fas fa-times"></i>

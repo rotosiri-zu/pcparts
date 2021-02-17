@@ -2,7 +2,9 @@
   position: absolute;
   margin-top: 8px;
 }
-
+[v-cloak]{
+  display: none;
+}
 .modal {
   &__inner{
     position: absolute;
