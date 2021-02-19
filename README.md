@@ -88,3 +88,4 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 - ページネーション機能
 - 単体・統合テスト(RSpec, Capybara)
 - 星評価機能(jQuery Raty)
+- モーダルウィンドウ(vue.js)
