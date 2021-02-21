@@ -21,19 +21,19 @@
             = link_to new_post_path, class: "nav-link" do
               %i.far.fa-paper-plane
               %span 投稿
+          %li.nav-item.dropdown    
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              カテゴリーから選ぶ
+            %ul.dropdown-menu.left{"aria-labelledby" => "navbarDropdown"}
+              - @category_parent_array.each do |parent|
+                %li.TopHeader__Inner__Lists__Left__Category__ParentCategories__List
+                  = link_to "#{parent.name}",category_path(parent), class: "dropdown-item"
           - if user_signed_in?
             %li.nav-item.dropdown
               %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
                 マイページ
               .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
                 %span= link_to "投稿一覧", user_path(current_user), class: "dropdown-item"
-            %li.nav-item.dropdown    
-              %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                カテゴリーから選ぶ
-              %ul.dropdown-menu.left{"aria-labelledby" => "navbarDropdown"}
-                - @category_parent_array.each do |parent|
-                  %li.TopHeader__Inner__Lists__Left__Category__ParentCategories__List
-                    = link_to "#{parent.name}",category_path(parent), class: "dropdown-item"
             %li.nav-item
               = link_to destroy_user_session_path, method: :delete, class: "nav-link" do
                 %i.fa.fa-user-minus
@@ -42,7 +42,7 @@
             %li.nav-item
               = link_to "ログイン", new_user_session_path, class: "nav-link"
             %li.nav-item
-              = link_to "会員登録", new_user_registration_path, class: "nav-link"
+              = link_to "新規会員登録", new_user_registration_path, class: "nav-link"
           %li.nav-item
             #modal
               %modal
