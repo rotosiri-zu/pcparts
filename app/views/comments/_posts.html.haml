@@ -10,16 +10,7 @@
             評価：#{comment.rate}点 | #{comment.title}
           / 星評価
           %div{:id => "star-rate-#{comment.id}"}
-            :javascript
-              $('#star-rate-#{comment.id}').raty({
-                size: 36,
-                starOff:  '#{asset_path('star-off.png')}',
-                starOn : '#{asset_path('star-on.png')}',
-                starHalf: '#{asset_path('star-half.png')}',
-                half: true,
-                readOnly: true,
-                score: '#{comment.rate}',
-              });
+            = render 'comments/read_rate'
           / /星評価
           %p= comment.content
         .col-md-12.edit-button
