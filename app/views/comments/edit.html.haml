@@ -13,15 +13,7 @@
   #star.form-group.row
     = f.label :rate,'評価 ', class:'col-md-3 col-form-label'
     = f.hidden_field :rate, id: :review_star
-    :javascript
-      $('#star').raty({
-        size     : 36,
-        starOff:  '#{asset_path('star-off.png')}',
-        starOn : '#{asset_path('star-on.png')}',
-        starHalf: '#{asset_path('star-half.png')}',
-        scoreName: 'comment[rate]',
-        half: true,
-      });
+    = render 'comments/write_rate'
   / 口コミ
   .form-group.row
     = f.label :content, '口コミ内容', class: 'col-md-3 col-form-label'
