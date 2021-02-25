@@ -92,3 +92,4 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 - モーダルウィンドウ(vue.js)
 - N+1(Bullet)
 - 画像アップロード(Amason S3, carrierwave)
+- 初期データ(seed_fu)
