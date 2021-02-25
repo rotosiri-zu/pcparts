@@ -24,6 +24,7 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 - HTML/CSS(SCSS)
 - bootstrap4
 - jquery
+- vue.js
 - rails 5.2.4.3
 - ruby 2.6.6
 
@@ -38,7 +39,7 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 
 # 【機能一覧】
 - PCPARTをクリックするとホーム画面に戻る
-# ログイン/ログアウト機能
+# ログイン/ログアウト機能(devise)
 - 登録したユーザーやゲストログインでログインできます。ホーム画面からもゲストログインでログインすることができます。
 
 ![circleanimationmuvie](https://user-images.githubusercontent.com/55967256/97158576-f9f7f700-17bc-11eb-9565-cfeb83af94dc.gif)
@@ -64,12 +65,12 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 
 ![2020-10-2620 18 54](https://user-images.githubusercontent.com/55967256/97303777-32bbcd00-189e-11eb-8eb9-b8b40aaf6926.gif)
 
-# ransackによる検索機能
+# ransackによる検索機能(ransack)
 - 投稿時に記入したタイトル名で検索できます。
 
 ![d32d3f013b5898f6588425a0f95a3f51](https://user-images.githubusercontent.com/55967256/97304632-5895a180-189f-11eb-9616-499052b40d46.gif)
 
-# カテゴリー検索機能
+# カテゴリー検索機能(ancestry)
 - 投稿時に選択肢したカテゴリーで検索できます。
 
 ![1b3fedbfed2ba3dca6fd34f10a117d3f](https://user-images.githubusercontent.com/55967256/97288584-62140f00-1889-11eb-85c3-dda2f66fd1fb.gif)
@@ -85,7 +86,9 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 
 ![2020-10-2620 24 43](https://user-images.githubusercontent.com/55967256/97303868-5252f580-189e-11eb-9c4b-d68c112638aa.gif)
 
-- ページネーション機能
-- 単体・統合テスト(RSpec, Capybara)
+- ページネーション機能(kaminari)
+- 単体・統合テスト(RSpec, Capybara, factory_bot_rails)
 - 星評価機能(jQuery Raty)
 - モーダルウィンドウ(vue.js)
+- N+1(Bullet)
+- 画像アップロード(Amason S3, carrierwave)
