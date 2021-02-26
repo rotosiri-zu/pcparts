@@ -90,6 +90,6 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 - 単体・統合テスト(RSpec, Capybara, factory_bot_rails)
 - 星評価機能(jQuery Raty)
 - モーダルウィンドウ(vue.js)
-- N+1(Bullet)
+- N+1(goldiloader)
 - 画像アップロード(Amason S3, carrierwave)
 - 初期データ(seed_fu)
