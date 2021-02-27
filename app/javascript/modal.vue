@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="modal_span" @click.prevent="isShow = !isShow" v-cloak>機能説明</span>
+    <span class="modal_span nav_link" @click.prevent="isShow = !isShow" v-cloak>機能説明</span>
 
     <transition name="fade">
       <div v-show="isShow">

@@ -1,9 +1,7 @@
 .modal_span{
-  position: absolute;
-  margin-top: 8px;
-  margin-left: 10px;
-  cursor: pointer;
-  border-radius: 0.25rem;
+  display: inline-block;
+  padding: 8px 10px;
+  margin-right: 10px;
 }
 [v-cloak]{
   display: none;
