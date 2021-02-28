@@ -38,7 +38,7 @@
               .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
                 %span= link_to "投稿一覧", user_path(current_user), class: "dropdown-item"
             %li.nav-item
-              = link_to destroy_user_session_path, method: :delete, class: "nav-link btn " do
+              = link_to destroy_user_session_path, method: :delete, class: "nav-link btn btn-outline-danger" do
                 %i.fa.fa-user-minus
                 %span ログアウト     
           - else
