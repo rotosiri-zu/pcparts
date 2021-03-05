@@ -18,9 +18,9 @@
                 ホーム
               %span.sr-only (current)
           %li.nav-item
-            = link_to new_post_path, class: "nav-link" do
+            = link_to new_post_path, class: "nav-link btn btn-outline-success" do
               %i.far.fa-paper-plane
-              %span 投稿
+              %span 新規投稿
           %li.nav-item.dropdown    
             %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               カテゴリーから選ぶ
