@@ -34,7 +34,9 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 - 以前AWSを使用していましたがAWSは無料期間が終了したため使用を停止しています。
 - postgresql
 
+# 【ER図】
 
+![Database.png](./public/Database.png)
 
 # 【機能一覧】
 - PCPARTをクリックするとホーム画面に戻る
