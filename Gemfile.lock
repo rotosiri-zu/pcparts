@@ -126,6 +126,9 @@ GEM
     goldiloader (4.0.0)
       activerecord (>= 5.2, < 7.1)
       activesupport (>= 5.2, < 7.1)
+    gretel (4.2.0)
+      actionview (>= 5.1, < 7.0)
+      railties (>= 5.1, < 7.0)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -357,6 +360,7 @@ DEPENDENCIES
   fog-aws
   font-awesome-sass
   goldiloader
+  gretel
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
