@@ -7,6 +7,26 @@ crumb :show_user do
   parent :root
 end
 
+crumb :posts do |query_params = nil|
+  link 'カテゴリー別アイテム一覧', query_params ? posts_path(query_params) : category_path
+  parent :root
+end  
+
+crumb :show_post do |post|
+  link post.title.to_s, post
+  parent :posts
+end
+
+crumb :edit_post do
+  link 'アイテム編集', edit_post_path
+  parent :root 
+end  
+
+# crumb :show_category do
+#   link 'カテゴリー別アイテム一覧', category_path
+#   parent :root
+# end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
