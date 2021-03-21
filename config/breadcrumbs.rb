@@ -10,6 +10,10 @@ end
 crumb :posts do |query_params = nil|
   link 'カテゴリー別アイテム一覧', query_params ? posts_path(query_params) : category_path
   parent :root
+end
+
+crumb :new_post do
+  link '新規投稿', new_post_path
 end  
 
 crumb :show_post do |post|
@@ -18,14 +22,34 @@ crumb :show_post do |post|
 end
 
 crumb :edit_post do
-  link 'アイテム編集', edit_post_path
+  link '投稿の編集', edit_post_path
   parent :root 
 end  
 
-# crumb :show_category do
-#   link 'カテゴリー別アイテム一覧', category_path
-#   parent :root
-# end
+crumb :category_show do
+  link 'カテゴリー別アイテム一覧', category_path
+  parent :root
+end
+
+crumb :new_sign_up do
+  link '新規会員登録', new_user_registration_path
+  parent :root
+end
+
+crumb :new_sign_in do
+  link 'ログイン', new_user_session_path
+  parent :root
+end
+
+crumb :policy do
+  link '利用規約', policy_path
+  parent :root
+end
+
+crumb :privacypolicy do
+  link 'プライバシーポリシー', privacypolicy_path
+  parent :root
+end
 
 # crumb :projects do
 #   link "Projects", projects_path
