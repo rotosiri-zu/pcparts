@@ -13,7 +13,7 @@
                 = button_tag type: 'submit', class: "search-btn" do
                   = icon('fas', 'search')
           %li.nav-item      
-            = link_to root_path, class: "nav-link" do
+            = link_to root_path, class: "nav-link btn btn-outline-success" do
               %i.fas.fa-home
                 ホーム
               %span.sr-only (current)
@@ -21,8 +21,8 @@
             = link_to new_post_path, class: "nav-link btn btn-outline-success" do
               %i.far.fa-paper-plane
               %span 新規投稿
-          %li.nav-item.dropdown    
-            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.btn.btn-outline-success.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               カテゴリーから選ぶ
             %ul.dropdown-menu.left{"aria-labelledby" => "navbarDropdown"}
               - @category_parent_array.each do |parent|

@@ -35,10 +35,11 @@
         %p.card-text
           = simple_format(@posts.text)
       / 口コミ投稿フォーム
-      .p-3.border
-        %h2.mb-3 口コミ投稿する
-        = render 'comments/new_post'
-      / / 口コミ投稿フォーム
+  - elsif user_signed_in? && current_user.id
+    .p-3.border
+      %h2.mb-3 口コミ投稿する
+      = render 'comments/new_post'
+    / / 口コミ投稿フォーム
   / 口コミ一覧
   = render 'comments/posts'
   / /口コミ一覧
