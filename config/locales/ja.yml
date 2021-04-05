@@ -8,15 +8,22 @@ ja:
         user:
           email: メールアドレス
           password: パスワード
+          password_confirmation: パスワード(確認)
+          created_at: 登録日時
+          updated_at: 更新日時
         comment:
           title: タイトル
           content: 口コミ内容
           rate: 評価
+          created_at: 登録日時
+          updated_at: 更新日時
         post:
           title: タイトル
           image: 画像ファイル
           category_id: ID
           price: 価格
+          created_at: 登録日時
+          updated_at: 更新日時
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
