@@ -7,9 +7,8 @@ crumb :show_user do
   parent :root
 end
 
-crumb :posts do |query_params = nil|
-  link 'カテゴリー別アイテム一覧', query_params ? posts_path(query_params) : category_path
-  parent :root
+crumb :posts do
+  link 'アイテム名'
 end
 
 crumb :new_post do
