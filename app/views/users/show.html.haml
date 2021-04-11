@@ -10,4 +10,7 @@
             %p.card-title= link_to (post.title), post
             %p.card-genre= (post.category.name)
             %span.card-price= "¥#{post.price.to_s(:delimited)}"
-            
+            .star
+              %span{id: "star-rate-#{post.id}"}
+              = render 'posts/read_rate', post: post
+            （口コミ #{post.comments.count} 件）
