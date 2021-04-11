@@ -32,8 +32,12 @@
   }
 }
 .card-body{
+  font-size: 12px;
   .card-title{
     font-size: 14px;
+  }
+  .card-price{
+    color: red;
   }
 }
 .p-3.border{
