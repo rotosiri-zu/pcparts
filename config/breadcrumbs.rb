@@ -8,7 +8,7 @@ crumb :show_user do
 end
 
 crumb :posts do
-  link 'アイテム名'
+  link '商品名'
 end
 
 crumb :new_post do
