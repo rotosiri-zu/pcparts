@@ -1,10 +1,14 @@
 crumb :root do
-  link "Home", root_path
+  link "トップページ", root_path
+end
+
+crumb :mypage do
+  link 'マイページ'
 end
 
 crumb :show_user do
   link 'ユーザー投稿一覧', user_path
-  parent :root
+  parent :mypage
 end
 
 crumb :posts do
@@ -25,9 +29,14 @@ crumb :edit_post do
   parent :root 
 end  
 
-crumb :category_show do
-  link 'カテゴリー別アイテム一覧', category_path
-  parent :root
+crumb :category do
+  link 'カテゴリー別アイテム一覧'
+end
+
+crumb :category_show do |category|
+  category = Category.find(params[:id]).root
+  link category.name, category_path
+  parent :category
 end
 
 crumb :new_sign_up do

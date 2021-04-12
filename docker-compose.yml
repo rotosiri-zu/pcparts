@@ -4,15 +4,20 @@ volumes:
   public_data:
   tmp_data:
   log_data:
+  pgadmin4-data:
 services:
   db:
     image: postgres
+    container_name: postgres
+    restart: always
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_HOST_AUTH_METHOD: trust
+      TZ: Asia/Tokyo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
   web:
     build: .
     command: bundle exec puma -C config/puma.rb
@@ -34,4 +39,17 @@ services:
       - 80:80
     depends_on:
       - web
-      
+  pgadmin4:
+    image: dpage/pgadmin4:4.2
+    restart: always
+    container_name: pgadmin4
+    ports:
+      - 8000:80
+    volumes:
+      - pgadmin4-data:/var/lib/pgadmin
+    environment:
+      TZ: Asia/Tokyo
+      PGADMIN_DEFAULT_EMAIL: postgres
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    depends_on:
+      - db
