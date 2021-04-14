@@ -1,4 +1,4 @@
-RakutenWedService.configure do |c|
+RakutenWebService.configure do |c|
     # (必須) アプリケーションID
   c.application_id = '1083244931594687166'
 

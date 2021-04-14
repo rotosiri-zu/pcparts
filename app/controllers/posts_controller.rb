@@ -17,7 +17,7 @@ class PostsController < ApplicationController
       flash[:success] = 'アイテムを登録しました'
       redirect_to root_path
     else
-      flash[:danger] = 'アイテムを登録できませんでした、記入項目を確認してください'
+      flash[:danger] = 'アイテムを登録できませんでした、既に同じアイテムが投稿されています'
       render :new
     end
   end

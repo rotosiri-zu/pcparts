@@ -11,7 +11,7 @@ class User < ApplicationRecord
                     format: {with: VALID_EMAIL_REGEX},
                     uniqueness: {case_sensitive: false}
   validates :password, length: {minimum: 6}, allow_nil: true
-
+  validates :nickname, uniqueness: true
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
