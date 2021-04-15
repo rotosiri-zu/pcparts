@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2021_04_04_140545) do
     t.string "title", null: false
     t.integer "price", null: false
     t.text "text", null: false
+    t.text "url"
+    t.string "genre_Id"
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

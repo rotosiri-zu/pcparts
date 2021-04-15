@@ -3,8 +3,10 @@ class PostsController < ApplicationController
   before_action :set_posts, only: %i[show edit update destroy]
   
   def index
+    create_rakuten_data(params)
+
     @number = 26
-    @posts = Post.order("created_at DESC").limit(@number)
+    @posts = Post.all.order("id DESC").limit(@number)
   end
 
   def new
@@ -68,4 +70,4 @@ class PostsController < ApplicationController
   def set_posts
     @posts = Post.find(params[:id])
   end
-end  
+end
