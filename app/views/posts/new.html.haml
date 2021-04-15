@@ -6,8 +6,8 @@
 
     = form_for @posts, url: posts_path, method: :post, remote: false do |f|
       .form-group
-        = f.label :image, '画像ファイル'
-        = f.file_field :image, class: 'form-control-file'
+        = f.label :image_url, '画像url'
+        = f.text_field :image_url, class: 'form-control-file'
       .form-group
         = f.label :title, '商品名'
         = f.text_field :title, class: 'form-control'

@@ -3,10 +3,8 @@ class PostsController < ApplicationController
   before_action :set_posts, only: %i[show edit update destroy]
   
   def index
-    create_rakuten_data(params)
-
     @number = 26
-    @posts = Post.all.order("id DESC").limit(@number)
+    @posts = Post.order("id DESC").limit(@number)
   end
 
   def new
@@ -19,7 +17,7 @@ class PostsController < ApplicationController
       flash[:success] = 'アイテムを登録しました'
       redirect_to root_path
     else
-      flash[:danger] = 'アイテムを登録できませんでした、既に同じアイテムが投稿されています'
+      flash[:danger] = 'アイテムを登録できませんでした、記入項目または既に同じアイテムが投稿されています'
       render :new
     end
   end
@@ -59,7 +57,7 @@ class PostsController < ApplicationController
   
   def post_params
     params.require(:post).permit(
-      :image,
+      :image_url,
       :title,
       :price,
       :text,

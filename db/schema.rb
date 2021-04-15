@@ -36,12 +36,12 @@ ActiveRecord::Schema.define(version: 2021_04_04_140545) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "image", null: false
     t.string "title", null: false
+    t.text "url"
+    t.string "image_url", null: false
     t.integer "price", null: false
     t.text "text", null: false
-    t.text "url"
-    t.string "genre_Id"
+    t.string "genre_id"
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

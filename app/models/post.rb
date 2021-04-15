@@ -1,5 +1,4 @@
 class Post < ApplicationRecord
-  mount_uploader :image, ImageUploader
   belongs_to :user, optional: true
   belongs_to :category, optional: true
   # コメント
@@ -9,5 +8,5 @@ class Post < ApplicationRecord
   validates  :category_id, presence: true
   validates  :price, presence: true, uniqueness: true
   validates  :text, presence: true, uniqueness: true
-  validates  :image, presence: true
+  validates  :image_url, presence: true
 end
