@@ -1,0 +1,13 @@
+.container
+  .row
+    - if @rakutens.any?
+      - @rakutens.each do |rakute|
+        .col-lg-3.col-md-6
+          .card
+            = image_tag rakute.image_url, class: "card-img-top"
+            .card-body
+              %p.card-title= link_to (rakute.item_name), rakute
+              %span.card-price= "¥#{number_with_delimiter(rakute.item_price)}" 
+              .star
+    - else
+      %h1 検索に一致する商品はありませんでした

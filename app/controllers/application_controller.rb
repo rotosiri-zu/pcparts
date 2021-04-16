@@ -16,10 +16,12 @@ class ApplicationController < ActionController::Base
 
   def set_search
     @number = 5
-    @q = Post.ransack(params[:q])
-    @search = @q.result(distinct: true).order(created_at: "DESC").includes(:user).page(params[:page]).per(@number)
+    @q = Post.all.ransack(params[:q])
+    @posts = @q.result(distinct: true).order(id: "DESC").page(params[:page]).per(@number)
+    @rakutensearch = Rakuten.all.ransack(params[:keyword])
+    @rakuten = @rakutensearch.result(distinct: true).order(id: "DESC").page(params[:page]).per(@number)
   end
-  
+
   def set_category_list
     @category_parent_array = Category.where(ancestry: nil)
   end
