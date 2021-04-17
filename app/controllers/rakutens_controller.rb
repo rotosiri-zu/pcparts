@@ -9,8 +9,9 @@ class RakutensController < ApplicationController
   def search
     @number = 5
     @rakutensearch = Rakuten.ransack(params[:rakutensearch])
-    @rakutens = @rakutensearch.result(distinct: true).order(id: "DESC").page(params[:page]).per(@number)
+    @rakutens = @rakutensearch.result(distinct: true).order(item_name: "DESC").page(params[:page]).per(@number)
     @results = RakutenWebService::Ichiba::Item.search(
+      keyword: 'CPU',
       genreId: 100087,
       page: params[:page],
       hits: 30)
@@ -33,6 +34,7 @@ class RakutensController < ApplicationController
     item_url = result['itemUrl']
     item_caption = result['itemCaption']
     genre_id = result['genreId']
+    item_code = result['itemCode']
     {
       image_url: image_url,
       item_name: item_name,
@@ -40,6 +42,7 @@ class RakutensController < ApplicationController
       item_url: item_url,
       item_caption: item_caption,
       genle_id: genre_id,
+      item_code: item_code
     }
   end
 end

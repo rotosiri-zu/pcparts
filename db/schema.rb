@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_04_16_044713) do
   create_table "rakutens", force: :cascade do |t|
     t.string "item_name"
     t.integer "item_price"
+    t.bigint "item_code"
     t.string "item_url"
     t.string "image_url"
     t.string "genle_id"
