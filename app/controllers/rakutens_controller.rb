@@ -11,7 +11,7 @@ class RakutensController < ApplicationController
     @rakutensearch = Rakuten.ransack(params[:rakutensearch])
     @rakutens = @rakutensearch.result(distinct: true).order(item_name: "DESC").page(params[:page]).per(@number)
     @results = RakutenWebService::Ichiba::Item.search(
-      keyword: 'CPU',
+      keyword: 'CPU ',
       genreId: 100087,
       page: params[:page],
       hits: 30)
