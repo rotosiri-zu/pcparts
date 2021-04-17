@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     @number = 5
     @q = Post.all.ransack(params[:q])
     @posts = @q.result(distinct: true).order(id: "DESC").page(params[:page]).per(@number)
-    @rakutensearch = Rakuten.all.ransack(params[:keyword])
+    @rakutensearch = Rakuten.all.ransack(params[:q])
     @rakuten = @rakutensearch.result(distinct: true).order(id: "DESC").page(params[:page]).per(@number)
   end
 

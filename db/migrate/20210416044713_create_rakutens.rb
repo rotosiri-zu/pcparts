@@ -3,6 +3,7 @@ class CreateRakutens < ActiveRecord::Migration[5.2]
     create_table :rakutens do |t|
       t.string :item_name
       t.integer :item_price
+      t.bigint :item_code
       t.string :item_url
       t.string :image_url
       t.string :genle_id
