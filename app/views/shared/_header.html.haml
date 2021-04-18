@@ -15,11 +15,6 @@
                 = f.text_field :title_cont, id: 'search', placeholder: '投稿商品名検索'
                 = button_tag type: 'submit', class: "search-btn" do
                   = icon('fas', 'search')
-            .search-bar
-              = search_form_for @rakutensearch, url: search_rakutens_path, class: 'container-2' do |f|
-                = f.text_field :item_name, id: 'search', placeholder: '楽天商品検索'
-                = button_tag type: 'submit', class: "search-btn" do
-                  = icon('fas', 'search')
           %li.nav-item.dropdown
             %a#navbarDropdown.nav-link.btn.btn-outline-primary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               カテゴリーから選ぶ
