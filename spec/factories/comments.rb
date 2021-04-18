@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :comment do
-    title { 'テスト' }
+    title { "テスト" }
     rate { 5 }
-    content { 'テスト' }
+    content { "テスト" }
     association :post
     association :user
   end

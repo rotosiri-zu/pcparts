@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   def set_search
     @number = 5
     @q = Post.all.ransack(params[:q])
-    @posts = @q.result(distinct: true).order(id: 'DESC').page(params[:page]).per(@number)
+    @posts = @q.result(distinct: true).order(id: "DESC").page(params[:page]).per(@number)
   end
 
   def set_category_list

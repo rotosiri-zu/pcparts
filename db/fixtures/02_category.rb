@@ -1,6 +1,6 @@
-require 'csv'
+require "csv"
 
-csv = CSV.read('db/category.csv')
+csv = CSV.read("db/category.csv")
 csv.each do |category|
   Category.seed do |s|
     s.id = category[0]

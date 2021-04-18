@@ -1,22 +1,22 @@
 crumb :root do
-  link 'トップページ', root_path
+  link "トップページ", root_path
 end
 
 crumb :mypage do
-  link 'マイページ'
+  link "マイページ"
 end
 
 crumb :show_user do
-  link 'ユーザー投稿一覧', user_path
+  link "ユーザー投稿一覧", user_path
   parent :mypage
 end
 
 crumb :posts do
-  link '商品名'
+  link "商品名"
 end
 
 crumb :new_post do
-  link '新規投稿', new_post_path
+  link "新規投稿", new_post_path
 end
 
 crumb :show_post do |post|
@@ -25,12 +25,12 @@ crumb :show_post do |post|
 end
 
 crumb :edit_post do
-  link '投稿の編集', edit_post_path
+  link "投稿の編集", edit_post_path
   parent :root
 end
 
 crumb :category do
-  link 'カテゴリー別アイテム一覧'
+  link "カテゴリー別アイテム一覧"
 end
 
 crumb :category_show do |category|
@@ -40,22 +40,22 @@ crumb :category_show do |category|
 end
 
 crumb :new_sign_up do
-  link '新規会員登録', new_user_registration_path
+  link "新規会員登録", new_user_registration_path
   parent :root
 end
 
 crumb :new_sign_in do
-  link 'ログイン', new_user_session_path
+  link "ログイン", new_user_session_path
   parent :root
 end
 
 crumb :policy do
-  link '利用規約', policy_path
+  link "利用規約", policy_path
   parent :root
 end
 
 crumb :privacypolicy do
-  link 'プライバシーポリシー', privacypolicy_path
+  link "プライバシーポリシー", privacypolicy_path
   parent :root
 end
 

@@ -1,5 +1,7 @@
 class FoortersController < ApplicationController
-  def policy; end
+  def policy
+  end
 
-  def privacypolicy; end
+  def privacypolicy
+  end
 end
