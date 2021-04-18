@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "Comments", type: :request do
+RSpec.describe 'Comments', type: :request do
   let(:user) { FactoryBot.create(:user) }
   let(:post_a) { FactoryBot.create(:post) }
-  let(:comment_a) {FactoryBot.attributes_for(:comment, user_id: user.id)}
+  let(:comment_a) { FactoryBot.attributes_for(:comment, user_id: user.id) }
   describe 'POST #create' do
     context 'パラメータが妥当な場合' do
-      let(:comment_params) {comment_a}
+      let(:comment_params) { comment_a }
       it 'リクエストが成功すること' do
         sign_in user
         post post_comments_path post_a, params: { comment: comment_params }
@@ -26,7 +26,7 @@ RSpec.describe "Comments", type: :request do
       end
     end
     context 'パラメータが不正な場合' do
-      let(:comment_params) {comment_a}
+      let(:comment_params) { comment_a }
       it 'リクエストが成功すること' do
         sign_in user
         post post_comments_path post_a, params: { comment: comment_params }
@@ -35,7 +35,7 @@ RSpec.describe "Comments", type: :request do
       it '口コミの投稿に失敗すること' do
         sign_in user
         post post_comments_path post_a, params: { comment: comment_params }
-        expect{comment_params}.to_not change(Comment, :count)
+        expect { comment_params }.to_not change(Comment, :count)
       end
       it 'エラーが表示されること' do
         sign_in user
@@ -57,7 +57,7 @@ RSpec.describe "Comments", type: :request do
     it '口コミのタイトルが表示されていること' do
       sign_in user
       get edit_post_comment_path(post_id: post_a.id, id: comment.id)
-      expect(response.body).to include "テスト"
+      expect(response.body).to include 'テスト'
     end
   end
 

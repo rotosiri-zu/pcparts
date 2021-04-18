@@ -1,5 +1,5 @@
 crumb :root do
-  link "トップページ", root_path
+  link 'トップページ', root_path
 end
 
 crumb :mypage do
@@ -17,7 +17,7 @@ end
 
 crumb :new_post do
   link '新規投稿', new_post_path
-end  
+end
 
 crumb :show_post do |post|
   link post.title.to_s, post
@@ -26,8 +26,8 @@ end
 
 crumb :edit_post do
   link '投稿の編集', edit_post_path
-  parent :root 
-end  
+  parent :root
+end
 
 crumb :category do
   link 'カテゴリー別アイテム一覧'

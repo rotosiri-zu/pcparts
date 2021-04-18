@@ -27,9 +27,9 @@ class CommentsController < ApplicationController
         flash[:danger] = '口コミの更新に失敗しました 記入項目を確認してください'
         redirect_back(fallback_location: root_path)
       end
-    end  
+    end
   end
-  
+
   def destroy
     posts = Post.find(params[:post_id])
     @comment = posts.comments.find(params[:id])

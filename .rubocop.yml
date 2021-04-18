@@ -1,0 +1,15 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  # アプリの Ruby のバージョンに合わせること!!
+  TargetRubyVersion: 2.6.6
+  NewCops: enable
+
+StringLiterals:
+  # 変数展開やエスケープの必要がない場合でも，ダブルクォートを利用
+  EnforcedStyle: double_quotes
+
+inherit_from:
+  - config/rubocop/rubocop.yml
+  - config/rubocop/rails.yml

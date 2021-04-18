@@ -5,4 +5,4 @@ User.seed do |s|
   s.password = 'admin0'
   s.password_confirmation = 'admin0'
   s.admin = true
-end  
+end

@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :system do
-  let(:post) {FactoryBot.create(:post)}
+RSpec.describe 'Posts', type: :system do
+  let(:post) { FactoryBot.create(:post) }
   let(:user) { FactoryBot.create(:user) }
-  let(:category) {FactoryBot.create(:category)}
+  let(:category) { FactoryBot.create(:category) }
 
   it '新規投稿したあと、その投稿を編集して最後に削除する' do
     visit root_path

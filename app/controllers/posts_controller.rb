@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   before_action :set_posts, only: %i[show edit update destroy]
-  
+
   def index
     @number = 26
-    @posts = Post.order("id DESC").limit(@number)
+    @posts = Post.order('id DESC').limit(@number)
   end
 
   def new
@@ -29,9 +29,8 @@ class PostsController < ApplicationController
     @comment = @posts.comments.new
   end
 
-  def edit
-  end
-  
+  def edit; end
+
   def update
     if @posts.user_id == current_user.id
       @posts.update(post_params)
@@ -50,11 +49,11 @@ class PostsController < ApplicationController
       flash[:success] = 'アイテムを削除しました'
       @posts.destroy
       redirect_to root_path
-    end  
+    end
   end
 
   private
-  
+
   def post_params
     params.require(:post).permit(
       :image_url,
