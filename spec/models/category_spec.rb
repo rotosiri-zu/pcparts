@@ -1,5 +1,5 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Category, type: :model do
-  let(:category) {FactoryBot.create(:category)}
+  let(:category) { FactoryBot.create(:category) }
 end

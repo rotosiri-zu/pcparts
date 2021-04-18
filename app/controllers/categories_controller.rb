@@ -4,9 +4,10 @@ class CategoriesController < ApplicationController
   def show
     @posts = @category.posts.order(created_at: :desc).all
   end
-  
+
   private
-  def set_category
-    @category = Category.find(params[:id])
-  end
+
+    def set_category
+      @category = Category.find(params[:id])
+    end
 end

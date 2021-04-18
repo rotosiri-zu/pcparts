@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "Rakutens", type: :request do
   describe "GET /index" do
@@ -14,5 +14,4 @@ RSpec.describe "Rakutens", type: :request do
       expect(response).to have_http_status(:success)
     end
   end
-
 end
