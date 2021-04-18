@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   def index
     @number = 26
     @posts = Post.order("id DESC").limit(@number)
-    @items = Rakuten.all.page(params[:page])
   end
 
   def new
