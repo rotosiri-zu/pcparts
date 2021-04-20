@@ -1,6 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Comment, type: :model do
+  let(:user) { FactoryBot.create(:user) }
   let(:comment) { FactoryBot.create(:comment) }
 
   describe "口コミ投稿が有効な場合" do

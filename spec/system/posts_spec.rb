@@ -17,10 +17,10 @@ RSpec.describe "Posts", type: :system do
     visit root_path
 
     # 新規の投稿をする
-    click_link "投稿"
+    click_link "新規投稿"
     expect(current_path).to eq new_post_path
 
-    attach_file "post[image]", "#{Rails.root}/spec/fixtures/test.jpg"
+    fill_in "post[image_url]", with: "https://image.sofmap.com/images/product/other/0735858392426_0.jpg?v=20012201"
     fill_in "post[title]", with: "テスト"
     select("カテゴリを選択してください", from: "post[category_id]")
     page.fill_in "post[price]", with: "000"
