@@ -1,14 +1,15 @@
 require "rails_helper"
 
 RSpec.describe User, type: :model do
-  let(:user) { FactoryBot.create(:user) }
+  let(:user) { FactoryBot.build(:user) }
 
   it "有効なファクトリを持つこと" do
     expect(FactoryBot.build(:user)).to be_valid
   end
 
-  it "メールアドレス、パスワードがあれば有効な状態であること" do
+  it "ニックネーム、メールアドレス、パスワードがあれば有効な状態であること" do
     user = User.new(
+      nickname: "テストユーザー",
       email: "guest@example.com",
       password: "00000000",
     )
@@ -16,6 +17,12 @@ RSpec.describe User, type: :model do
   end
 
   describe "存在性の検証" do
+    it 'ニックネームが無いと無効な状態であること' do
+      user.nickname = nil
+      user.valid?
+      expect(user.errors[:nickname]).to include('を入力してください')
+    end
+
     it "メールアドレスがなければ無効な状態であること" do
       user.email = nil
       user.valid?

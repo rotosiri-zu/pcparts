@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :post do
-    image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/test.jpg")) }
+    image_url { "https://image.sofmap.com/images/product/other/0735858392426_0.jpg?v=20012201" }
     title { "テスト" }
     price { 49_478 }
     text { "テスト" }

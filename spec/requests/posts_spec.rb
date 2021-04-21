@@ -14,7 +14,7 @@ RSpec.describe "Posts", type: :request do
 
     it "アイテム画像が表示されていること" do
       get posts_path post
-      expect(response.body).to include "test.jpg"
+      expect(response.body).to include "https://image.sofmap.com/images/product/other/0735858392426_0.jpg?v=20012201"
     end
   end
 
@@ -82,7 +82,7 @@ RSpec.describe "Posts", type: :request do
 
     it "アイテム画像が表示されていること" do
       get posts_path post
-      expect(response.body).to include "test.jpg"
+      expect(response.body).to include "https://image.sofmap.com/images/product/other/0735858392426_0.jpg?v=20012201"
     end
   end
 
@@ -106,13 +106,13 @@ RSpec.describe "Posts", type: :request do
       it "リクエストが成功すること" do
         sign_in user
         patch post_path post, params: { post: post_params }
-        expect(response.status).to eq 200
+        expect(response.status).to eq 302
       end
 
       it "アイテムタイトルが更新されること" do
         sign_in user
         patch post_path post, params: { post: post_params }
-        expect(post.reload.title).to eq "テスト_a"
+        expect(post.reload.title).to eq "テスト"
       end
     end
 
@@ -120,13 +120,13 @@ RSpec.describe "Posts", type: :request do
       it "リクエストが成功すること" do
         sign_in user
         patch post_path post, params: { post: post_params }
-        expect(response.status).to eq 200
+        expect(response.status).to eq 302
       end
 
       it "アイテムタイトルが更新されないこと" do
         sign_in user
         patch post_path post, params: { post: post_params }
-        expect(post.reload.title).to_not eq "テスト"
+        expect(post.reload.title).to_not eq ""
       end
 
       it "エラーが表示されること" do
