@@ -1,8 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Comment, type: :model do
-  let(:user) { FactoryBot.create(:user) }
-  let(:comment) { FactoryBot.create(:comment) }
+  let(:comment) { FactoryBot.build(:comment) }
 
   describe "口コミ投稿が有効な場合" do
     it "口コミ投稿ができること" do
@@ -18,7 +17,7 @@ RSpec.describe Comment, type: :model do
     end
 
     describe "口コミ評価を検証する場合" do
-      it "rateががない場合、無効である" do
+      it "rateがない場合、無効であること" do
         comment.rate = nil
         comment.valid?
         expect(comment.errors[:rate]).to include("を入力してください")

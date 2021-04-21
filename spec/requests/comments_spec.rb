@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Comments", type: :request do
   let(:user) { FactoryBot.create(:user) }
-  let(:post_a) { FactoryBot.create(:post) }
+  let(:post_a) { FactoryBot.create(:post, user: user) }
   let(:comment_a) { FactoryBot.attributes_for(:comment) }
   describe "POST #create" do
     context "パラメータが妥当な場合" do
