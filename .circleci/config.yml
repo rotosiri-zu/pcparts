@@ -34,8 +34,40 @@ jobs:
       - run:
           name: RSpec
           command: bundle exec rspec
+
+  rubocop:
+    docker:
+      - image: circleci/ruby:2.6.6-node-browsers
+        environment:
+          RAILS_ENV: test
+          POSTGRES_HOST: 127.0.0.1
+      - image: circleci/postgres:9.4
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+
+    working_directory: ~/pcparts
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - v1-dependencies-
+      - run: gem install bundler:1.17.3
+      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - save_cache:
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./vendor/bundle
+      - run:
+          name: RuboCop
+          command: bundle exec rubocop
+
 workflows:
   version: 2
-  rspec_and_rubocop_and_eslint:
+  rspec_and_rubocop_and:
     jobs:
       - rspec
+      - rubocop
