@@ -1,3 +1,7 @@
+inherit_from:
+  - config/rubocop/rubocop.yml
+  - config/rubocop/rails.yml
+
 require:
   - rubocop-rails
 
@@ -9,7 +13,3 @@ AllCops:
 StringLiterals:
   # 変数展開やエスケープの必要がない場合でも，ダブルクォートを利用
   EnforcedStyle: double_quotes
-
-inherit_from:
-  - config/rubocop/rubocop.yml
-  - config/rubocop/rails.yml
