@@ -4,7 +4,7 @@
       .col-md-6.mb-3
         .posts-content
           %p.posts-nickname
-            = @posts.user.nickname
+            = comment.user.nickname
           %p 投稿日： #{comment.created_at.try(:strftime,"%Y/%m/%d %H:%M")} #{comment.user.try(:nickname)}
           %h4.mb-3
             評価：#{comment.rate}点 | #{comment.title}
