@@ -10,7 +10,7 @@
             評価：#{comment.rate}点 | #{comment.title}
           / 星評価
           %div{:id => "star-rate-#{comment.id}"}
-            = render 'comments/read_rate'
+            = render 'comments/read_rate', comment: comment
           / /星評価
           %p= comment.content
         .col-md-12.edit-button
