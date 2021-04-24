@@ -4,9 +4,9 @@ class CreateComments < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.float :rate, null: false
       t.text :content, null: false
+      t.string :picture
       t.references :user, foreign_key: true
       t.references :post, foreign_key: true
-      t.references :rakuten
       t.timestamps
     end
   end
