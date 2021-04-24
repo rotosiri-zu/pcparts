@@ -13,6 +13,7 @@
             = render 'comments/read_rate', comment: comment
           / /星評価
           %p= comment.content
+          = image_tag comment.picture.url, class:'img-fluid' if comment.picture?
         .col-md-12.edit-button
           - if user_signed_in? && current_user == comment.user
             = link_to '口コミを編集', edit_post_comment_path(id: comment.id, post_id: comment.post.id), method: :get, class:'btn btn-default'
