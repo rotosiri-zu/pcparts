@@ -7,7 +7,7 @@
     = form_for @posts, url: post_path, method: :patch, remote: false do |f|
       .form-group
         = f.label :image_url, '画像url'
-        = f.file_field :image_url, class: 'form-control-file'
+        = f.text_field :image_url, class: 'form-control-file'
       .form-group
         = f.label :title, '商品名'
         = f.text_field :title, class: 'form-control'

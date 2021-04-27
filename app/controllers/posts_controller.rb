@@ -33,15 +33,12 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @posts.user_id == current_user.id
-      @posts.update!(post_params)
-      if @posts.save
-        flash[:success] = "アイテムを更新しました"
-        redirect_to root_path
-      else
-        flash[:danger] = "アイテムの更新に失敗しました 記入項目を確認してください"
-        render :edit
-      end
+    if @posts.update!(post_params)
+      flash[:success] = "アイテムを更新しました"
+      redirect_to root_path
+    else
+      flash[:danger] = "アイテムの更新に失敗しました 記入項目を確認してください"
+      render :edit
     end
   end
 
