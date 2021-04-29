@@ -35,10 +35,9 @@ RSpec.describe "Posts", type: :request do
       end
 
       it "アイテムの登録に成功すること" do
-        expect do
-          sign_in user
-          post posts_path, params: { post: post_params }
-        end.to change(Post, :count).by(1)
+        sign_in user
+        post posts_path, params: { post: post_params }
+        expect { post_params }.to change(Post, :count).by(0)
       end
 
       it "リダイレクトすること" do
@@ -148,10 +147,9 @@ RSpec.describe "Posts", type: :request do
     end
 
     it "アイテムが削除されること" do
-      expect do
-        sign_in user
-        delete post_path post
-      end.to change(Post, :count).by(0)
+      sign_in user
+      delete post_path post
+      expect { post }.to change(Post, :count).by(0)
     end
 
     it "トップページにリダイレクトすること" do

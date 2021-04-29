@@ -18,15 +18,12 @@ class CommentsController < ApplicationController
   end
 
   def update
-    if @comment.user_id == current_user.id
-      @comment.update!(comment_params)
-      if @comment.save
-        flash[:success] = "口コミを更新しました"
-        redirect_to root_path
-      else
-        flash[:danger] = "口コミの更新に失敗しました 記入項目を確認してください"
-        redirect_back(fallback_location: root_path)
-      end
+    if @comment.update!(comment_params)
+      flash[:success] = "口コミを更新しました"
+      redirect_to root_path
+    else
+      flash[:danger] = "口コミの更新に失敗しました 記入項目を確認してください"
+      redirect_back(fallback_location: root_path)
     end
   end
 

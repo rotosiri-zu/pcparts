@@ -7,8 +7,7 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
   }
 
-  resources :users, only: %i[show] do
-  end
+  resources :users, only: %i[show]
 
   resources :posts do
     collection do

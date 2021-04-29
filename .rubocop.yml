@@ -10,6 +10,44 @@ AllCops:
   TargetRubyVersion: 2.6.6
   NewCops: enable
 
+  Exclude:
+    - 'bin/bundle'
+    - 'bin/rails'
+    - 'bin/rake'
+    - 'bin/setup'
+    - 'bin/update'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'log/**/*'
+    - 'vendor/bundle/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+
 StringLiterals:
   # 変数展開やエスケープの必要がない場合でも，ダブルクォートを利用
   EnforcedStyle: double_quotes
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/development.rb'
+    - 'config/environments/production.rb'
+    - 'config/routes.rb'
+    - 'spec/**/*.rb'
+
+Style/BlockDelimiters:
+  FunctionalMethods:
+    - let
+    - let!
+    - subject
+  Exclude:
+      - "spec/**/*_spec.rb"
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true

@@ -22,7 +22,7 @@ RSpec.describe "Posts", type: :system do
 
     fill_in "post[image_url]", with: "https://image.sofmap.com/images/product/other/0735858392426_0.jpg?v=20012201"
     fill_in "post[title]", with: "テスト"
-    select("カテゴリを選択してください", from: "post[category_id]")
+    find("#post_category_id").find("option[value='']").select_option
     page.fill_in "post[price]", with: "000"
     fill_in "post[text]", with: "テスト"
     click_button "投稿"
