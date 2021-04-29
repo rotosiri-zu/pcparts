@@ -33,9 +33,9 @@ crumb :category do
   link "カテゴリー別アイテム一覧"
 end
 
-crumb :category_show do |category|
-  category = Category.find(params[:id]).root
-  link category.name, category_path
+crumb :category_show do
+  category_list = Category.find(params[:id]).root
+  link category_list.name, category_path
   parent :category
 end
 

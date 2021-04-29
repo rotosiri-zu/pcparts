@@ -8,5 +8,5 @@ class Post < ApplicationRecord
   validates  :category_id, presence: true
   validates  :price, presence: true, uniqueness: true
   validates  :text, presence: true, uniqueness: true
-  validates  :image_url, presence: true
+  validates  :image_url, presence: true, uniqueness: true
 end
