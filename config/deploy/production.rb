@@ -1,7 +1,7 @@
 server "3.115.99.74", user: "hiroki", roles: %w{app db web}
 
 set :ssh_options, {
-    keys: %w(~/.ssh/PcParts.pem),
+    keys: %w(~/.ssh/PcParts_key_rsa),
     forward_agent: true,
     auth_methods: %w(publickey),
   }

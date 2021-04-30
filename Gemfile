@@ -42,11 +42,6 @@ group :development, :test do
   gem "rspec-rails"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
-  gem "capistrano", "~> 3.10", require: false
-  gem "capistrano-rails", "~> 1.6", require: false
-  gem 'capistrano-rbenv', '~> 2.2'
-  gem 'capistrano-rbenv-vars', '~> 0.1'
-  gem 'capistrano3-puma'
 end
 
 group :development do
@@ -58,6 +53,13 @@ group :development do
   gem "spring"
   gem "spring-commands-rspec"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-rails", "~> 1.6", require: false
+  gem 'capistrano-rbenv', '~> 2.2'
+  gem 'capistrano-rbenv-vars', '~> 0.1'
+  gem 'capistrano3-puma'
+  gem 'ed25519' 
+  gem 'bcrypt_pbkdf'
 end
 
 group :test do
