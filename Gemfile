@@ -49,17 +49,17 @@ group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "web-console", ">= 3.3.0"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem "bcrypt_pbkdf"
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano3-puma"
+  gem "capistrano-rails", "~> 1.6", require: false
+  gem "capistrano-rbenv", "~> 2.2"
+  gem "capistrano-rbenv-vars", "~> 0.1"
+  gem "ed25519"
   gem "goldiloader"
   gem "spring"
   gem "spring-commands-rspec"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "capistrano", "~> 3.10", require: false
-  gem "capistrano-rails", "~> 1.6", require: false
-  gem 'capistrano-rbenv', '~> 2.2'
-  gem 'capistrano-rbenv-vars', '~> 0.1'
-  gem 'capistrano3-puma'
-  gem 'ed25519' 
-  gem 'bcrypt_pbkdf'
 end
 
 group :test do
@@ -76,6 +76,7 @@ gem "ancestry"
 gem "bootstrap"
 gem "carrierwave"
 gem "devise"
+gem "dotenv-rails"
 gem "fog-aws"
 gem "font-awesome-sass"
 gem "gretel"
@@ -88,4 +89,3 @@ gem "ransack"
 gem "seed-fu"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "webpacker"
-gem 'dotenv-rails'
