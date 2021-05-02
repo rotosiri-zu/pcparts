@@ -3,7 +3,7 @@ lock "~> 3.16.0"
 
 set :application, "pcparts"
 set :repo_url, "git@github.com:rotosiri-zu/pcparts.git"
-set :rbenv_ruby, File.read('.ruby-version').strip
+set :rbenv_ruby, File.read("ruby-version").strip
 
 # Nginxの設定ファイル名と置き場所を修正
 set :nginx_config_name, "#{fetch(:application)}.conf"
