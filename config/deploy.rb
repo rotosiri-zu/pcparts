@@ -12,6 +12,11 @@ set :nginx_sites_enabled_path, "/etc/nginx/conf.d"
 append :linked_files, "config/master.key"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "node_modules"
 
+require 'seed-fu/capistrano'
+
+# Trigger the task after update_code
+after 'deploy:update_code', 'db:seed_fu'
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
