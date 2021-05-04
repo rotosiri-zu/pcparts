@@ -31,10 +31,10 @@ https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 # 【インフラ】
 - GitHub
 - heroku
-- 以前AWSを使用していましたがAWSは無料期間が終了したため使用を停止しています。
 - postgresql
 - Docker
 - circleci
+- Amazon Web Services(EC2, S3, VPC, Route 53)
 
 # 【ER図】
 
