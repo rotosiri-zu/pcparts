@@ -1,4 +1,4 @@
-server "3.115.99.74", user: "hiroki", roles: %w[app db web]
+server "35.73.146.8", user: "hiroki", roles: %w[app db web]
 
 set :ssh_options, {
   keys: %w[~/.ssh/PcParts_key_rsa],
