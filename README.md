@@ -10,6 +10,8 @@ https://pcparts-staging.herokuapp.com/
 なお、各機能や使用技術を紹介した記事をQiitaにも投稿しました。
 https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 
+Amazon Web Services http://pcparts.work/
+
 # 【開発した背景】
 私は趣味で自作PCを作成しており、他のユーザーがどんなパーツを使っているのか興味がありました。そこで、自作PCを作成しているユーザー同士が、パーツの投稿をし合うSNSを作ることで、パーツ選びに対する関心を深めたり、購入時の参考にできると思い制作しました。
 
