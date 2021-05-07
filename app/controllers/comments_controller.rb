@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_action :correct_user, only: %i[edit update]
   before_action :set_comment, only: %i[edit update]
   def create
-    @comments = Comment.create!(comment_params)
+    @comments = Comment.new(comment_params)
     if @comments.save
       flash[:success] = "口コミを投稿しました"
       redirect_to root_path
@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
   end
 
   def update
-    if @comment.update!(comment_params)
+    if @comment.update(comment_params)
       flash[:success] = "口コミを更新しました"
       redirect_to root_path
     else
