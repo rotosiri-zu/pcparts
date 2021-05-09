@@ -42,6 +42,9 @@ Amazon Web Services https://pcparts.work/
 
 ![Database.png](./public/Database.png)
 
+# [AWS構成図]
+![AWS.png](./public/AWS.png)
+
 # 【機能一覧】
 - PCPARTをクリックするとホーム画面に戻る
 # ログイン/ログアウト機能(devise)
