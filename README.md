@@ -101,4 +101,4 @@ Amazon Web Services https://pcparts.work/
 - N+1(goldiloader)
 - 画像アップロード(Amason S3, carrierwave)
 - 初期データ(seed_fu)
-- CircleCIを用いたCI/CD機能
+- CircleCIとCapistranoを用いたCI/CD機能
