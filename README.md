@@ -36,7 +36,7 @@ Amazon Web Services https://pcparts.work/
 - postgresql
 - Docker
 - circleci
-- Amazon Web Services(EC2, S3, VPC, Route 53, ACM, ALB)
+- Amazon Web Services(EC2, S3, VPC, Route 53, ACM, ALB, IAM)
 
 # 【ER図】
 
