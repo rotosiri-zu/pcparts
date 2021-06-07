@@ -5,7 +5,6 @@ PCパーツ投稿サイトはユーザーが使用しているパーツやユー
 パーツを使用した感想を口コミで投稿できます。
 
 # 【ポートフォリオURL】
-https://pcparts-staging.herokuapp.com/
 
 なお、各機能や使用技術を紹介した記事をQiitaにも投稿しました。
 https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
@@ -32,7 +31,6 @@ Amazon Web Services https://pcparts.work/
 
 # 【インフラ】
 - GitHub
-- heroku
 - postgresql
 - Docker
 - circleci
