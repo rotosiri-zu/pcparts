@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   before_action :set_posts, only: %i[show edit update destroy]
+  before_action :set_displaynumber, only: %i[index show]
+  before_action :set_pagenumber, only: %i[index show]
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   def index
-    @number = 26
-    @posts = Post.order("id DESC").limit(@number)
+    @posts = Post.order("id DESC").limit(@displaynumber)
   end
 
   def new
@@ -23,9 +25,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @displaynumber = 10
-    @number = 26
-    @comments = @posts.comments.order("created_at DESC").limit(@displaynumber).page(params[:page]).per(@number)
+    @comments = @posts.comments.order("created_at DESC").limit(@displaynumber).page(params[:page]).per(@pagenumber)
     @comment = @posts.comments.new
   end
 
@@ -64,5 +64,18 @@ class PostsController < ApplicationController
 
     def set_posts
       @posts = Post.find(params[:id])
+    end
+
+    def set_displaynumber
+      @displaynumber = 10
+    end
+
+    def set_pagenumber
+      @pagenumber = 26
+    end
+
+    def record_not_found
+      flash[:error] = "ご指定のページが見つかりません"
+      redirect_back(fallback_location: root_path)
     end
 end

@@ -1,7 +1,7 @@
 - breadcrumb :show_post, @posts
 .container
-  .row.p-3
-    %h2 投稿詳細情報
+  %h2.heading 投稿詳細情報
+  .row
     .col-md-4
       .post_detail
         .panel.panel-default
@@ -26,7 +26,7 @@
         = link_to 'ツクモで詳しく見る', "https://shop.tsukumo.co.jp/", class: 'btn btn-success'
         = link_to 'ドスパラで詳しく見る', "https://www.dospara.co.jp/?utm_source=google&utm_medium=cpc&utm_campaign=gsl_brand&utm_term=gsl_brand&utm_content=0000009&_bdadid=JPGTE5.01c4000o&gclid=Cj0KCQjwqfz6BRD8ARIsAIXQCf1gudbEj7QgQ3uGjYOoxxPLt3TTkblk5twlMJiEsgIJogOq_siTQIcaAkPEEALw_wcB", class: 'btn btn-outline-info'
     .card-body
-      %h2.card-title 商品の詳細
+      %h2.heading.card-title 商品の詳細
       %p.card-text= @posts.text
   - if user_signed_in? && current_user.id == @posts.user_id
     .container
