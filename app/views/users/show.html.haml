@@ -7,7 +7,7 @@
         .card
           = image_tag post.image_url, class: "card-img-top"
           .card-body
-            %p.card-title= link_to (post.title), post
+            %p.card-title.text-truncate= link_to (post.title), post
             %p.card-genre= (post.category.name)
             %span.card-price= "¥#{post.price.to_s(:delimited)}"
             .star

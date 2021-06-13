@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   before_action :set_current_user
   before_action :set_search
   before_action :set_category_list
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
+  private
 
   def set_current_user
     @current_user = User.find_by(id: session[:user_id])
@@ -15,12 +18,17 @@ class ApplicationController < ActionController::Base
   end
 
   def set_search
-    @number = 5
+    @pagenumber = 5
     @q = Post.all.ransack(params[:q])
-    @posts = @q.result(distinct: true).order(id: "DESC").page(params[:page]).per(@number)
+    @posts = @q.result(distinct: true).order(id: "DESC").page(params[:page]).per(@pagenumber)
   end
 
   def set_category_list
     @category_parent_array = Category.where(ancestry: nil)
+  end
+
+  def record_not_found
+    flash[:error] = "ご指定のページが見つかりません"
+    redirect_back(fallback_location: root_path)
   end
 end

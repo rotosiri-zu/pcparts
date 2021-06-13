@@ -1,19 +1,26 @@
-.navbar.navbar-expand-lg.navbar-light.navbar-right{
+.navbar.navbar-expand-lg.navbar-light.navbar-right.global-nav{
   background-color: beige;
   display: flex;
   z-index: 1;
-  border-bottom: 2px solid black;
-  .nav-link {
-    margin-right: 10px;
-    color: black;
-    text-decoration: none;
+  border-bottom: 2px solid #000000;
+  .navbar-brand{
+    padding-bottom: 15px;
   }
-  .TopHeader__Inner__Lists__Left__Category__ParentCategories__List{
-    a{
-      text-decoration: none;
-      color: #000;
+      .nav-item{
+        padding-bottom: 10px;
+        .nav-link {
+          margin-right: 10px;
+          color: black;
+          text-decoration: none;
+        }
+      }
+
+    .TopHeader__Inner__Lists__Left__Category__ParentCategories__List{
+      a{
+        text-decoration: none;
+        color: #000;
+      }
     }
-  }
   // 検索ボタン
   .search-bar{
     .container-2{

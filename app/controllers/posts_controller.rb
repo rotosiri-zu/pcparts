@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   before_action :set_posts, only: %i[show edit update destroy]
+  before_action :set_displaynumber, only: %i[index show]
+  before_action :set_pagenumber, only: %i[index show]
 
   def index
-    @number = 26
-    @posts = Post.order("id DESC").limit(@number)
+    @posts = Post.order("id DESC").limit(@displaynumber)
   end
 
   def new
@@ -23,9 +24,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @displaynumber = 10
-    @number = 26
-    @comments = @posts.comments.order("created_at DESC").limit(@displaynumber).page(params[:page]).per(@number)
+    @comments = @posts.comments.order("created_at DESC").limit(@displaynumber).page(params[:page]).per(@pagenumber)
     @comment = @posts.comments.new
   end
 
@@ -52,17 +51,25 @@ class PostsController < ApplicationController
 
   private
 
-    def post_params
-      params.require(:post).permit(
-        :image_url,
-        :title,
-        :price,
-        :text,
-        :category_id,
-      ).merge(user_id: current_user.id)
-    end
+  def post_params
+    params.require(:post).permit(
+      :image_url,
+      :title,
+      :price,
+      :text,
+      :category_id,
+    ).merge(user_id: current_user.id)
+  end
 
-    def set_posts
-      @posts = Post.find(params[:id])
-    end
+  def set_posts
+    @posts = Post.find(params[:id])
+  end
+
+  def set_displaynumber
+    @displaynumber = 10
+  end
+
+  def set_pagenumber
+    @pagenumber = 26
+  end
 end
