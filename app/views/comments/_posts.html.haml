@@ -18,3 +18,7 @@
           - if user_signed_in? && current_user == comment.user
             = link_to '口コミを編集', edit_post_comment_path(id: comment.id, post_id: comment.post.id), method: :get, class:'btn btn-default'
             = link_to '口コミを削除', post_comment_path(post_id: comment.post.id, id: comment.id), method: :delete, class:'btn btn-default'
+%nav{"aria-label" => "Page navigation example"}
+  %ul.pagination
+    %li.page-item
+      = paginate @comments
