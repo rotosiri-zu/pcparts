@@ -51,25 +51,25 @@ class PostsController < ApplicationController
 
   private
 
-  def post_params
-    params.require(:post).permit(
-      :image_url,
-      :title,
-      :price,
-      :text,
-      :category_id,
-    ).merge(user_id: current_user.id)
-  end
+    def post_params
+      params.require(:post).permit(
+        :image_url,
+        :title,
+        :price,
+        :text,
+        :category_id,
+      ).merge(user_id: current_user.id)
+    end
 
-  def set_posts
-    @posts = Post.find(params[:id])
-  end
+    def set_posts
+      @posts = Post.find(params[:id])
+    end
 
-  def set_displaynumber
-    @displaynumber = 10
-  end
+    def set_displaynumber
+      @displaynumber = 10
+    end
 
-  def set_pagenumber
-    @pagenumber = 26
-  end
+    def set_pagenumber
+      @pagenumber = 26
+    end
 end

@@ -37,15 +37,15 @@ class CommentsController < ApplicationController
 
   private
 
-  def comment_params
-    params.require(:comment).permit(:title, :rate, :content, :picture).merge(post_id: params[:post_id], user_id: current_user.id)
-  end
+    def comment_params
+      params.require(:comment).permit(:title, :rate, :content, :picture).merge(post_id: params[:post_id], user_id: current_user.id)
+    end
 
-  def correct_user
-    @comment = current_user.comments.find_by(id: params[:id])
-  end
+    def correct_user
+      @comment = current_user.comments.find_by(id: params[:id])
+    end
 
-  def set_comment
-    @comment = Comment.find_by(id: params[:id])
-  end
+    def set_comment
+      @comment = Comment.find_by(id: params[:id])
+    end
 end
