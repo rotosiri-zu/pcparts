@@ -47,26 +47,26 @@ Amazon Web Services https://pcparts.work/
 
 ## 使用技術
 * フロントエンド
- * jQuery 4.4.0
- * Vue.js 2.6.12
- * HTML/SCSS/bootstrap4
+  * jQuery 4.4.0
+  * Vue.js 2.6.12
+  * HTML/SCSS/bootstrap4
 
 * バックエンド
- * Ruby 2.6.6
- * Ruby on Rails 5.2.4.3
+  * Ruby 2.6.6
+  * Ruby on Rails 5.2.4.3
 
 * インフラ
- * CircleCI
- * Docker　3.3.3/docker-compose 1.29.1
- * PostgreSQL 13.2/pgadmin4
- * Amazon Web Services(EC2, S3, VPC, Route 53, ACM, ALB, IAM)
+  * CircleCI
+  * Docker　3.3.3/docker-compose 1.29.1
+  * PostgreSQL 13.2/pgadmin4
+  * Amazon Web Services(EC2, S3, VPC, Route 53, ACM, ALB, IAM)
 
 * バージョン管理
- * github
+  * github
 
 * その他の使用ツール
- * Visual Studio Code
- * draw.io
+  * Visual Studio Code
+  * draw.io
 
 ## 【ER図】
 
@@ -87,20 +87,20 @@ Amazon Web Services https://pcparts.work/
 
 ## 【機能一覧】
 * ユーザー登録関連
- * 新規登録
- * ログイン、ログアウト機能
- * かんたんログイン機能（ゲストユーザーログイン）
+  * 新規登録
+  * ログイン、ログアウト機能
+  * かんたんログイン機能（ゲストユーザーログイン）
 * ページネーション機能
- * コメント一覧、投稿一覧
+  * コメント一覧、投稿一覧
 * コメント機能
- * コメント一覧機能（ページネーション）
+  * コメント一覧機能（ページネーション）
 * 検索機能
- * 投稿の検索
+  * 投稿の検索
 * フラッシュメッセージ表示機能
- * 投稿、編集、削除、ログイン、ログアウト、存在しない商品確認時にフラッシュメッセージを表示
+  * 投稿、編集、削除、ログイン、ログアウト、存在しない商品確認時にフラッシュメッセージを表示
 * 画像アップロード(Amason S3バケット)
 * マイページ関連
- * 投稿一覧
+  * 投稿一覧
 * RSpecテスト
 
 ## 環境構築手順
