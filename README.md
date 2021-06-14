@@ -129,16 +129,10 @@ $ docker-compose up
 $ docker-compose exec web bundle exec rails db:create db:migrate db:seed_fu
 ```
 
-5. RSpec を実行する
-
-```
-$ docker-compose exec web bundle exec rails rspec
-```
-
 6. RuboCop を実行する
 
 ```
-$ docker-compose exec web bundle exec rails rubocop
+$ bundle exec  rubocop
 ```
 
 ## npm ライブラリインストール
