@@ -17,7 +17,7 @@
       .form-inline
         = f.label :price, '値段'
         %span.price_yen_sign ¥
-        = f.number_field :price, class: 'price_number', placeholder: "0"
+        = f.text_field :price, class: 'price_number', placeholder: "例)100"
       .form-group
         = f.label :text, '本文'
         = f.text_area :text, class: 'form-control', rows: "4"
