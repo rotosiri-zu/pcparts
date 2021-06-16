@@ -46,6 +46,9 @@ Amazon Web Services https://pcparts.work/
 ![2020-10-2620 24 43](https://user-images.githubusercontent.com/55967256/97303868-5252f580-189e-11eb-9c4b-d68c112638aa.gif)
 
 ## 使用技術
+
+* OS
+  * mac Catalina バージョン 10.15.7
 * フロントエンド
   * jQuery 4.4.0
   * Vue.js 2.6.12
@@ -57,7 +60,7 @@ Amazon Web Services https://pcparts.work/
 
 * インフラ
   * CircleCI
-  * Docker　3.3.3/docker-compose 1.29.1
+  * Docker 3.3.3/docker-compose 1.29.1
   * PostgreSQL 13.2/pgadmin4
   * Amazon Web Services(EC2, S3, VPC, Route 53, ACM, ALB, IAM)
 
