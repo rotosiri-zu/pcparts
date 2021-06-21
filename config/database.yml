@@ -85,5 +85,5 @@ production:
   <<: *default
   database: pcparts_production
   username: pcparts
-  password: <%= ENV['PCPARTS_DATABASE_PASSWORD'] %>
-  host: <%= ENV['PCPARTS_DATABASE_HOSTNAME']%>
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
