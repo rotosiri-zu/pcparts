@@ -87,4 +87,3 @@ production:
   username: pcparts
   password: <%= ENV['PCPARTS_DATABASE_PASSWORD'] %>
   host: <%= ENV['PCPARTS_DATABASE_HOSTNAME']%>
-  port: 5432
