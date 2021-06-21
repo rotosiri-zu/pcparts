@@ -84,6 +84,6 @@ test:
 production:
   <<: *default
   database: pcparts_production
-  username: pcparts
+  username: hiroki
   password: <%= Rails.application.credentials.db[:password] %>
   host: <%= Rails.application.credentials.db[:hostname] %>
