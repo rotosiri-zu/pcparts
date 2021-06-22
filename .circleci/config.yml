@@ -62,8 +62,7 @@ jobs:
             - "af:6a:59:80:3a:00:ad:5f:33:5b:27:5a:c6:58:e9:97"
       - puma:
           name: puma config
-          command: bundle exec cap production puma:config 
-          bundle exec cap production puma:systemd:config puma:systemd:enable
+          command: bundle exec cap production puma:config bundle exec cap production puma:systemd:config puma:systemd:enable
       - nginx:
           name: nginx config
           command: bundle exec cap production puma:nginx_config
