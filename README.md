@@ -62,7 +62,7 @@ Amazon Web Services https://pcparts.work/
   * CircleCI
   * Docker 3.3.3/docker-compose 1.29.1
   * PostgreSQL 13.2/pgadmin4
-  * Amazon Web Services(EC2, S3, VPC, Route 53, ACM, ALB, IAM)
+  * Amazon Web Services(EC2, S3, VPC, Route 53, ACM, ALB, IAM, RDS)
 
 * バージョン管理
   * github
