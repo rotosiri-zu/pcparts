@@ -9,15 +9,18 @@
             = image_tag @posts.image_url, class: "card-img-top"
           .panel-body
     .col-md-8
-      %h4= @posts.title
       %table.table
         %tbody
           %tr
-            %th 価格
+            %th 商品名:
+            %td
+              = @posts.title
+          %tr
+            %th 価格:
             %td
               ¥#{number_with_delimiter(@posts.price)}
           %tr
-            %th カテゴリー
+            %th カテゴリー:
             %td= @posts.category.name
       .buttons.text-coenter
         = link_to 'ソフマップで詳しくみる',"https://www.sofmap.com/", class: 'btn btn-primary'
