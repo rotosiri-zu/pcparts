@@ -14,7 +14,7 @@
       .form-group
         = f.label :category_id, 'カテゴリー'
         = f.collection_select :category_id, Category.all, :id, :name, {include_blank: "カテゴリを選択してください"}, {class: 'form-control'}
-      .form-inline
+      .form-group
         = f.label :price, '値段'
         %span.price_yen_sign ¥
         = f.text_field :price, class: 'price_number', placeholder: "例)100"
