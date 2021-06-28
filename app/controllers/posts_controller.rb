@@ -66,7 +66,7 @@ class PostsController < ApplicationController
     end
 
     def set_displaynumber
-      @displaynumber = 12
+      @displaynumber = 15
     end
 
     def set_pagenumber

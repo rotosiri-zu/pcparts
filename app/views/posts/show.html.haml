@@ -36,12 +36,8 @@
       .mt-4.text-right
         = link_to '編集', edit_post_path, class: 'btn btn-primary'
         = link_to '削除', post_path, class: 'btn btn-danger', method: :delete
-      / 口コミ投稿フォーム
   - elsif user_signed_in? && current_user.id
     .p-3.border
       %h2.mb-3 口コミ投稿する
       = render 'comments/new_post'
-    / / 口コミ投稿フォーム
-  / 口コミ一覧
   = render 'comments/posts'
-  / /口コミ一覧
