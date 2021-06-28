@@ -17,14 +17,7 @@
         .col-md-12.edit-button#model-open-btn
           - if user_signed_in? && current_user == comment.user
             = link_to '口コミを編集', edit_post_comment_path(id: comment.id, post_id: comment.post.id), method: :get, class:'btn btn-default'
-            = link_to '口コミを削除', post_comment_path(post_id: comment.post.id, id: comment.id), method: :delete, class:'btn btn-default', id: 'comment-delete-btn'
-            #overlay
-              #modalWindow
-                .model-message-box
-                  %div 確認
-                  %div 本当に削除しますか？
-                  %buttton#model-close-btn キャンセル
-                  %button#delete-comformation-btn 削除する
+            = link_to '口コミを削除', post_comment_path(post_id: comment.post.id, id: comment.id), method: :delete, class:'btn btn-default', data: { confirm: '本当に削除しますか？' } 
 %nav{"aria-label" => "Page navigation example"}
   %ul.pagination
     %li.page-item
