@@ -36,8 +36,13 @@
       .mt-4.text-right
         = link_to '編集', edit_post_path, class: 'btn btn-primary'
         = link_to '削除', post_path, class: 'btn btn-danger', method: :delete, data: { confirm: '本当に削除しますか？' }
-  - elsif user_signed_in? && current_user.id
+    .p-3.border
+      %h2.mb-3 口コミ投稿する
+      = render 'comments/new_post'
+    = render 'comments/posts'
+  - elsif user_signed_in?
     .p-3.border
       %h2.mb-3 口コミ投稿する
       = render 'comments/new_post'
   = render 'comments/posts'
+  
