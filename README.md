@@ -11,7 +11,7 @@ PCパーツを投稿するアプリケーションです。ユーザーが使用
 なお、各機能や使用技術を紹介した記事をQiitaにも投稿しました。
 https://qiita.com/hongjitufang25/items/0c78602333ba5503dc9d
 
-Amazon Web Services https://pcparts.work/
+heroku https://pcparts-staging.herokuapp.com/
 
 
 ## 【開発した背景】
