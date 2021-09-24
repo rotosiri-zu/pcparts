@@ -57,9 +57,9 @@ jobs:
       - run:
           name: Rubocop
           command: bundle exec rubocop
-      - add_ssh_keys:
-          fingerprints:
-            - "af:6a:59:80:3a:00:ad:5f:33:5b:27:5a:c6:58:e9:97"
+      # - add_ssh_keys:
+      #     fingerprints:
+      #       - "af:6a:59:80:3a:00:ad:5f:33:5b:27:5a:c6:58:e9:97"
       # - run:
       #     name: puma config
       #     command: | 
