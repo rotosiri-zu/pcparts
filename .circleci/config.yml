@@ -1,4 +1,3 @@
-
 # Ruby CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-ruby/ for more details
@@ -57,13 +56,13 @@ jobs:
       - run:
           name: Rubocop
           command: bundle exec rubocop
-      # - add_ssh_keys:
-      #     fingerprints:
-      #       - "af:6a:59:80:3a:00:ad:5f:33:5b:27:5a:c6:58:e9:97"
+      - add_ssh_keys:
+          fingerprints:
+            - "6b:7d:61:de:32:39:86:95:87:83:88:61:25:fb:bc:01"
       # - run:
       #     name: puma config
-      #     command: | 
-      #       bundle exec cap production puma:config 
+      #     command: |
+      #       bundle exec cap production puma:config
       # - run:
       #     name: nginx config
       #     command: bundle exec cap production puma:nginx_config
