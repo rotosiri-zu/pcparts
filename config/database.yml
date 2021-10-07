@@ -80,4 +80,4 @@ production:
   <<: *default
   database: pcparts_production
   username: postgres
-  password: <%= Rails.application.credentials.db[:password] %>
+  password: <%= ENV['DB_PASSWORD'] %>
