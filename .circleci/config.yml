@@ -58,7 +58,7 @@ jobs:
           command: bundle exec rubocop
       - add_ssh_keys:
           fingerprints:
-            - "6b:7d:61:de:32:39:86:95:87:83:88:61:25:fb:bc:01"
+            - "62:b8:e3:b0:b9:ba:fb:f1:af:1f:b6:91:15:7d:21:16"
       # - run:
       #     name: puma config
       #     command: |
