@@ -1,7 +1,8 @@
-server "160.251.55.67", user: "root", roles: %w[app db web]
+server user: "saifree052", roles: %w[app db web]
 
 set :ssh_options, {
   keys: [ENV.fetch("PRODUCTION_SSH_KEY").to_s],
+  port:                  22,
   forward_agent: true,
   auth_methods: %w[publickey],
 }
