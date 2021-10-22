@@ -1,4 +1,4 @@
-server user: "saifree052", roles: %w[app db web]
+server 160.251.55.67, user: "saifree052", roles: %w[app db web]
 
 set :ssh_options, {
   keys: [ENV.fetch("PRODUCTION_SSH_KEY").to_s],
